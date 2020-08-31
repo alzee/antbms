@@ -1,6 +1,6 @@
 /* pages/login/index.wxss */
 .swiper-tab {
-    width: 90%;
+    width: 80%;
     text-align: center;
 } 
 .swiper-tab-list {
@@ -10,14 +10,16 @@
     margin-right: 1.3rem;
     padding-bottom: .5rem;
 }
+input {
+    padding-bottom: .5rem;
+}
 .on {
     color: #007bff;
     border-bottom: #007bff 2px solid;
 }
 .swiper-box {
     display: block;
-    height: 100%;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
 }
 .swiper-box view {
@@ -45,9 +47,6 @@
 .swiper-tab, .input-pass {
     border-bottom: #dbdbdb 1px solid;
     margin-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    
 }
 .login-submit {
     background-color: #007bff;
