@@ -1,0 +1,42 @@
+<!--pages/dash/index.wxml-->
+<!--index.wxml-->
+<view class="container">
+    <view id="summary">
+        <view>
+            <text>当前连接状态：</text>
+            <text>aaaaaaaaaaaa</text>
+        </view>
+        <view>
+            <text>运行时间：</text>
+            <text>aaaaaaaaaaaa</text>
+        </view>
+    </view>
+    <view id="dash">
+        <view id="progress">
+            <progress percent="75" stroke-width="8"/>
+            <text>SOC</text>
+            <text>总容量：</text>
+            <text>35.886AH</text>
+        </view>
+        <view>
+            <view>
+                <text>充电MOS：</text>
+                <text>aaaaaaaaaaaa</text>
+            </view>
+                    <view>
+                <text>放电MOS：</text>
+                <text>aaaaaaaaaaaa</text>
+            </view>
+            <view>
+                <text>均衡：</text>
+                <text>aaaaaaaaaaaa</text>
+            </view>
+        </view>
+    </view>
+    <view id="parameters">
+    </view>
+    <view id="temperature">
+    </view>
+    <view id="voltage">
+    </view>
+</view>

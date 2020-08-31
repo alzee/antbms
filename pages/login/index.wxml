@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="logo">
+		<image src="/img/icon_logo1.png" class="logo-img"></image>
+	</view>
+
+	<view class="swiper-tab">
+		<view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">验证密码</view>
+		<view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">修改密码</view>
+	</view>
+
+	<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+		<swiper-item>
+			<form class="login-form" catchsubmit="formSubmit" catchreset="formReset">
+				<view class="input-pass">
+					<image src="/img/setting_password.png" class="pass-lock"></image>
+					<input class="weui-input" name="input" placeholder="请输入密码验证" />
+				</view>
+				<view>
+					<button class="login-submit" formType="submit">确定</button>
+				</view>
+			</form>
+		</swiper-item>
+		<swiper-item>
+			<form class="login-form" catchsubmit="formSubmit" catchreset="formReset">
+				<view class="input-pass">
+					<image src="/img/setting_check.png" class="pass-lock"></image>
+					<input class="weui-input" name="input" placeholder="请输入密码验证" />
+				</view>
+				<view class="input-pass">
+					<image src="/img/setting_password.png" class="pass-lock"></image>
+					<input class="weui-input" name="input" placeholder="请输入8位新密码" />
+				</view>
+				<view>
+					<button class="login-submit" formType="submit">确定</button>
+				</view>
+			</form>
+		</swiper-item>
+	</swiper>
+</view>

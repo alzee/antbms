@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/status/index",
+    "pages/chart/index",
+    "pages/setting/index",
+    "pages/control/index",
+    "pages/login/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#4a4a4a", 
+    "selectedColor": "#007bff",
+    "list": [
+      {
+        "pagePath": "pages/status/index",
+        "text": "实时状态",
+        "iconPath": "img/icon_tab1.png",
+        "selectedIconPath": "img/icon_tab1_select.png"
+      },
+      {
+        "pagePath": "pages/chart/index",
+        "text": "动态曲线",
+        "iconPath": "img/icon_tab2.png",
+        "selectedIconPath": "img/icon_tab2_select.png"
+      },
+      {
+        "pagePath": "pages/setting/index",
+        "text": "参数设置",
+        "iconPath": "img/icon_tab3.png",
+        "selectedIconPath": "img/icon_tab3_select.png"
+      },
+      {
+        "pagePath": "pages/control/index",
+        "text": "控制",
+        "iconPath": "img/icon_tab4.png",
+        "selectedIconPath": "img/icon_tab4_select.png"
+      },
+      {
+        "pagePath": "pages/login/index",
+        "text": "登录",
+        "iconPath": "img/icon_tab4.png",
+        "selectedIconPath": "img/icon_tab4_select.png"
+      }
+    ]
+  }
+}
