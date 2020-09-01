@@ -1,5 +1,4 @@
-<!--pages/dash/index.wxml-->
-<!--index.wxml-->
+<!--pages/status/index.wxml-->
 <view class="container">
     <view id="summary">
         <view>
@@ -37,6 +36,46 @@
     </view>
     <view id="temperature">
     </view>
+    <view id="line">
+        <image src="/img/line.png">11</image>
+        <text>单体电压</text>
+    </view>
     <view id="voltage">
+      <view class="vol">
+        <view class="vol-num">
+          <image src="/img/icon_chip.png"></image>
+          <text>01</text>
+        </view>
+        <view class="vol-value">
+          <text>0.016V</text>
+        </view>
+      </view>
+      <view class="vol">
+        <view class="vol-num bg-green">
+          <image src="/img/icon_chip.png"></image>
+          <text>01</text>
+        </view>
+        <view class="vol-value text-primary">
+          <text>0.016V</text>
+        </view>
+      </view>
+      <view class="vol">
+        <view class="vol-num">
+          <image src="/img/icon_chip.png"></image>
+          <text>01</text>
+        </view>
+        <view class="vol-value">
+          <text>0.016V</text>
+        </view>
+      </view>
+      <view class="vol">
+        <view class="vol-num">
+          <image src="/img/icon_chip.png"></image>
+          <text>01</text>
+        </view>
+        <view class="vol-value text-danger">
+          <text>0.016V</text>
+        </view>
+      </view>
     </view>
 </view>

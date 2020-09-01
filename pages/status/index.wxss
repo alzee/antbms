@@ -1,4 +1,13 @@
 /* pages/dash/index.wxss */
+.text-primary {
+  color: #007bff;
+}
+.text-danger {
+  color: #dc3545;
+}
+.bg-green {
+  background-color: #57e620 !important;
+}
 #summary {
     padding-bottom: 1rem;
     border-bottom: #dbdbdb 1px solid;
@@ -9,4 +18,58 @@
 }
 #progress {
     border-right: #dbdbdb 1px solid;
+}
+#voltage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#voltage image {
+    width: 24px;
+    height: 24px;
+}
+.vol-num, .vol-value {
+  padding: .3em .6em;
+}
+.vol-num {
+  background-color: #007bff;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+.vol-value {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.2);
+}
+.vol {
+  flex: 0 0 50%;
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .2em .1em;
+}
+.vol-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.vol-num text {
+  margin-left: 6px;
+}
+#line {
+  margin: 1.5rem 0;
+  position: relative;
+}
+#line image {
+  height: 18px;
+}
+#line text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: #666666;
 }
