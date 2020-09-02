@@ -136,3 +136,23 @@
   color: #007bff;
   margin-bottom: 20rpx;
 }
+#dash>view {
+    width: 50%;
+    padding: 40rpx 32rpx;
+}
+#dash text {
+    font-size: 26rpx;
+}
+.dot {
+    display: inline-block;
+    width: 28rpx;
+    height: 28rpx;
+    border-radius: 50rem;
+    background-color: #58e520;
+    margin-left: 28rpx;
+    margin-right: 16rpx;
+}
+.label {
+    display: inline-block;
+    width: 142rpx;
+}
