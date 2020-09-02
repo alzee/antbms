@@ -11,11 +11,14 @@
 */
 } 
 .text-primary {
-  color: #007bff;
+  color: #007bff !important;
 }
 .text-danger {
-  color: #dc3545;
+  color: #dc3545 !important;
 }
 .bg-green {
   background-color: #58e520 !important;
+}
+.bg-primary {
+  background-color: #008aff !important;
 }
