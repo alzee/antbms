@@ -1,20 +1,21 @@
 /* pages/dash/index.wxss */
-.text-primary {
-  color: #007bff;
-}
-.text-danger {
-  color: #dc3545;
-}
-.bg-green {
-  background-color: #57e620 !important;
-}
 #summary {
-    padding-bottom: 1rem;
-    border-bottom: #dbdbdb 1px solid;
+    padding: 40rpx 28px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#summary>view {
+    flex: 0 0 100%;
+}
+#summary>view>text:first-child {
+    display: inline-block;
+    width: 192rpx;
 }
 #dash {
     display: flex;
     justify-content: center;
+    border-bottom: #dbdbdb 1px solid;
+    border-top: #dbdbdb 1px solid;
 }
 #progress {
     border-right: #dbdbdb 1px solid;
@@ -63,7 +64,7 @@
   position: relative;
 }
 #line image {
-  height: 18px;
+  height: 32rpx;
 }
 #line text {
   position: absolute;
@@ -140,7 +141,7 @@
     width: 50%;
     padding: 40rpx 32rpx;
 }
-#dash text {
+text {
     font-size: 26rpx;
 }
 .dot {
@@ -148,7 +149,6 @@
     width: 28rpx;
     height: 28rpx;
     border-radius: 50rem;
-    background-color: #58e520;
     margin-left: 28rpx;
     margin-right: 16rpx;
 }

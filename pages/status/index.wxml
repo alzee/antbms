@@ -3,11 +3,11 @@
     <view id="summary">
         <view>
             <text>当前连接状态：</text>
-            <text>aaaaaaaaaaaa</text>
+            <text class="text-primary">aaaaaaaaaaaa</text>
         </view>
         <view>
             <text>运行时间：</text>
-            <text>aaaaaaaaaaaa</text>
+            <text class="text-primary">aaaaaaaaaaaa</text>
         </view>
     </view>
     <view id="dash">
@@ -20,17 +20,17 @@
         <view>
             <view>
                 <text class="label">充电MOS：</text>
-                <text class="dot"></text>
+                <text class="dot bg-green"></text>
                 <text>开启</text>
             </view>
             <view>
                 <text class="label">放电MOS：</text>
-                <text class="dot"></text>
+                <text class="dot bg-green"></text>
                 <text>开启</text>
             </view>
             <view>
                 <text class="label">均衡：</text>
-                <text class="dot"></text>
+                <text class="dot bg-green"></text>
                 <text>开启</text>
             </view>
         </view>

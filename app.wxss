@@ -5,6 +5,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 100rpx 0;
   box-sizing: border-box;
+/*
+  padding: 100rpx 0;
+*/
 } 
+.text-primary {
+  color: #007bff;
+}
+.text-danger {
+  color: #dc3545;
+}
+.bg-green {
+  background-color: #58e520 !important;
+}
