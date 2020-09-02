@@ -33,8 +33,97 @@
         </view>
     </view>
     <view id="parameters">
+        <view>
+          <image src="/img/icon_totalvoltage.png"></image>
+          <view>
+            <text>56.7 V</text>
+            <text>总电压</text>
+          </view>
+        </view>
+        <view>
+          <image src="/img/icon_electriccurrent.png"></image>
+          <view>
+            <text>56.7 V</text>
+            <text>总电压</text>
+          </view>
+        </view>
+        <view>
+          <image src="/img/icon_power.png"></image>
+          <view>
+            <text>56.7 V</text>
+            <text>总电压</text>
+          </view>
+        </view>
+        <view>
+          <image src="/img/icon_maximumvoltage.png"></image>
+          <view>
+            <text>56.7 V</text>
+            <text>总电压</text>
+          </view>
+        </view>
+        <view>
+          <image src="/img/icon_minimumvoltage.png"></image>
+          <view>
+            <text>56.7 V</text>
+            <text>总电压</text>
+          </view>
+        </view>
+        <view>
+          <image src="/img/icon_differentialpressure.png"></image>
+          <view>
+            <text>56.7 V</text>
+            <text>总电压</text>
+          </view>
+        </view>
+        <view>
+          <image src="/img/icon_totalcirculation.png"></image>
+          <view>
+            <text>56.7 V</text>
+            <text>总电压</text>
+          </view>
+        </view>
+        <view>
+          <image src="/img/icon_totalvoltage.png"></image>
+          <view>
+            <text>56.7 V</text>
+            <text>总电压</text>
+          </view>
+        </view>
     </view>
     <view id="temperature">
+        <view>
+          <image src="/img/icon_temperature.png"></image>
+        </view>
+        <view>
+          <view class="temp-text" id="temp-mos">
+            <view>
+              <text>MOS</text>
+              <text>16℃</text>
+            </view>
+            <view>
+              <text>均衡</text>
+              <text>16℃</text>
+            </view>
+          </view>
+          <view class="temp-text" id="temp-t">
+            <view>
+              <text>T1</text>
+              <text>16℃</text>
+            </view>
+            <view>
+              <text>T1</text>
+              <text>16℃</text>
+            </view>
+            <view>
+              <text>T1</text>
+              <text>16℃</text>
+            </view>
+            <view>
+              <text>T1</text>
+              <text>16℃</text>
+            </view>
+          </view>
+        </view>
     </view>
     <view id="line">
         <image src="/img/line.png">11</image>

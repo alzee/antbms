@@ -73,3 +73,66 @@
   text-align: center;
   color: #666666;
 }
+#temperature {
+    width: 94%;
+    display: flex;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.2);
+  border-radius: .5rem;
+}
+#temperature image {
+    width: 140rpx;
+    height: 180rpx;
+  margin: 30rpx 35rpx;
+}
+#temp-mos {
+    width: 90%;
+    border-bottom: #dbdbdb 1rpx solid;
+    padding-bottom: 10rpx;
+}
+#temp-t {
+    padding-top: 10rpx;
+}
+#temp-mos, #temp-t {
+    display: flex;
+  flex-wrap: wrap;
+}
+#temp-mos>view, #temp-t>view {
+    flex: 0 0 50%;
+    max-width: 43%;
+    padding: 10rpx 10rpx;
+}
+#temp-mos>view>text:first-child {
+    margin-right: 30rpx;
+}
+#temp-t>view>text:first-child {
+    margin-right: 40rpx;
+}
+#temp-mos>view>text:last-child, #temp-t>view>text:last-child {
+  color: #007bff;
+}
+#parameters {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 18rpx 12rpx;
+}
+#parameters>view {
+    display: flex;
+    flex: 0 0 33.33333%;
+    max-width: 28%;
+    align-items: center;
+    justify-content: center;
+    margin: 30rpx 16rpx;
+}
+#parameters image {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 20rpx;
+}
+#parameters text {
+    display: block;
+    font-size: 26rpx;
+}
+#parameters>view>view>text:first-child {
+  color: #007bff;
+  margin-bottom: 20rpx;
+}
