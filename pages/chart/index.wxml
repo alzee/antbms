@@ -4,8 +4,7 @@
         <image src="/img/line2.png"></image>
     </view>
     <view id="chart">
-      <canvas>
-      </canvas>
+        <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
     </view>
     <view class="title" id="title2">
         <text>动态仪表图</text>
