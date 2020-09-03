@@ -97,34 +97,30 @@
         <view>
           <image src="/img/icon_temperature.png"></image>
         </view>
-        <view>
-          <view class="temp-text" id="temp-mos">
-            <view>
-              <text>MOS</text>
-              <text>16℃</text>
-            </view>
-            <view>
-              <text>均衡</text>
-              <text>16℃</text>
-            </view>
+        <view id="temp-text">
+          <view class="first-line">
+            <text>MOS</text>
+            <text class="text-primary">16℃</text>
           </view>
-          <view class="temp-text" id="temp-t">
-            <view>
-              <text>T1</text>
-              <text>16℃</text>
-            </view>
-            <view>
-              <text>T1</text>
-              <text>16℃</text>
-            </view>
-            <view>
-              <text>T1</text>
-              <text>16℃</text>
-            </view>
-            <view>
-              <text>T1</text>
-              <text>16℃</text>
-            </view>
+          <view class="first-line">
+            <text>均衡</text>
+            <text class="text-primary">16℃</text>
+          </view>
+          <view>
+            <text>T1</text>
+            <text class="text-primary">16℃</text>
+          </view>
+          <view>
+            <text>T1</text>
+            <text class="text-primary">16℃</text>
+          </view>
+          <view>
+            <text>T1</text>
+            <text class="text-primary">16℃</text>
+          </view>
+          <view>
+            <text>T1</text>
+            <text class="text-primary">16℃</text>
           </view>
         </view>
     </view>
