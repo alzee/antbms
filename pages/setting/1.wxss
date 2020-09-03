@@ -1,0 +1,22 @@
+/* pages/setting/index.wxss */
+.list-item {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: #dbdbdb 1rpx solid;
+}
+.list-item>text {
+    display: block;
+    width: 608rpx;
+}
+.icon {
+    width: 48rpx;
+    height: 48rpx;
+    margin: 0 28rpx;
+}
+.arrow {
+    width: 20rpx;
+    height: 32rpx;
+}
+
