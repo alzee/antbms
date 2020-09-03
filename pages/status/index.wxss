@@ -33,7 +33,6 @@
   padding: .3em .6em;
 }
 .vol-num {
-  background-color: #007bff;
   border-top-left-radius: .25rem;
   border-bottom-left-radius: .25rem;
 }
@@ -146,6 +145,7 @@ text {
     border-radius: 50rem;
     margin-left: 28rpx;
     margin-right: 16rpx;
+    background-color: #58e520 !important;
 }
 .label {
     display: inline-block;

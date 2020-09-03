@@ -20,17 +20,17 @@
         <view>
             <view>
                 <text class="label">充电MOS：</text>
-                <text class="dot bg-green"></text>
+                <text class="dot"></text>
                 <text>开启</text>
             </view>
             <view>
                 <text class="label">放电MOS：</text>
-                <text class="dot bg-green"></text>
+                <text class="dot"></text>
                 <text>开启</text>
             </view>
             <view>
                 <text class="label">均衡：</text>
-                <text class="dot bg-green"></text>
+                <text class="dot"></text>
                 <text>开启</text>
             </view>
         </view>
@@ -130,7 +130,7 @@
     </view>
     <view id="voltage">
       <view class="vol">
-        <view class="vol-num">
+        <view class="vol-num bg-primary">
           <image src="/img/icon_chip.png"></image>
           <text>01</text>
         </view>
@@ -148,7 +148,7 @@
         </view>
       </view>
       <view class="vol">
-        <view class="vol-num">
+        <view class="vol-num bg-primary">
           <image src="/img/icon_chip.png"></image>
           <text>01</text>
         </view>
@@ -157,7 +157,7 @@
         </view>
       </view>
       <view class="vol">
-        <view class="vol-num">
+        <view class="vol-num bg-primary">
           <image src="/img/icon_chip.png"></image>
           <text>01</text>
         </view>

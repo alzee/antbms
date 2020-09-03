@@ -17,7 +17,7 @@
   color: #dc3545 !important;
 }
 .bg-green {
-  background-color: #58e520 !important;
+  background-color: #81e04c !important;
 }
 .bg-primary {
   background-color: #008aff !important;
