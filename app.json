@@ -1,10 +1,20 @@
 {
   "pages":[
-    "pages/setting/index",
+    "pages/setting/1",
     "pages/status/index",
     "pages/chart/index",
     "pages/control/index",
     "pages/login/index",
+    "pages/setting/index",
+    "pages/setting/2",
+    "pages/setting/3",
+    "pages/setting/4",
+    "pages/setting/5",
+    "pages/setting/6",
+    "pages/setting/7",
+    "pages/setting/8",
+    "pages/setting/9",
+    "pages/setting/10",
     "pages/logs/logs"
   ],
   "window":{

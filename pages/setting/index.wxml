@@ -5,4 +5,49 @@
       <text>电芯特性</text>
       <image class="arrow" src="/img/setting_next.png"></image>
     </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon2.png"></image>
+      <text>保护参数</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon3.png"></image>
+      <text>告警参数</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon4.png"></image>
+      <text>温度保护</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon5.png"></image>
+      <text>BMS硬件参数</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon6.png"></image>
+      <text>均衡控制</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon7.png"></image>
+      <text>SOC静态表</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon8.png"></image>
+      <text>连接内阻</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon9.png"></image>
+      <text>霍尔测速</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon10.png"></image>
+      <text>系统</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
 </view>
