@@ -1,2 +1,51 @@
 <!--pages/control/index.wxml-->
-<text>pages/control/index.wxml</text>
+<view class="container">
+  <view class="shadow" id="switch"> 
+    <view>
+      <view class="title">
+        <text>充电开关</text>
+      </view>
+      <view class="icon">
+        <image src="/img/icon_charge_open.png"></image>
+      </view>
+      <view class="switch bg-primary">
+        <image src="/img/icon_switch.png"></image>
+        <text>已打开</text>
+      </view>
+    </view>
+    <view>
+      <view class="title">
+        <text>放电开关</text>
+      </view>
+      <view class="icon">
+        <image src="/img/icon_discharge_open.png"></image>
+      </view>
+      <view class="switch bg-primary">
+        <image src="/img/icon_switch.png"></image>
+        <text>已打开</text>
+      </view>
+    </view>
+  </view> 
+  <view class="shadow" id="system"> 
+    <view>
+      <image src="/img/icon_operation1.png"></image>
+      <text>重启系统</text>
+    </view>
+    <view>
+      <image src="/img/icon_operation2.png"></image>
+      <text>重启系统</text>
+    </view>
+    <view>
+      <image src="/img/icon_operation3.png"></image>
+      <text>重启系统</text>
+    </view>
+    <view>
+      <image src="/img/icon_operation4.png"></image>
+      <text>重启系统</text>
+    </view>
+    <view>
+      <image src="/img/icon_operation5.png"></image>
+      <text>重启系统</text>
+    </view>
+  </view> 
+</view>

@@ -1,1 +1,64 @@
 /* pages/control/index.wxss */
+.container {
+    padding: 36rpx 28rpx;
+}
+#switch {
+    display: flex;
+    justify-content: space-around;
+    width: 664rpx;
+    border-radius: .6rem;
+}
+#switch>view {
+    text-align: center;
+    width: 50%;
+    margin: 40rpx 28rpx;
+}
+#switch>view:first-child {
+    border-right: #dbdbdb 1rpx dashed;
+}
+.icon image {
+    width: 124rpx;
+    height: 124rpx;
+}
+.switch image {
+    width: 60rpx;
+    height: 60rpx;
+}
+.switch {
+    border-radius: 50rem;
+    color: #ffffff;
+    font-size: 26rpx;
+    padding: 0 32rpx;
+    display: flex;
+    align-items: center;
+    width: 140rpx;
+    margin: auto;
+}
+.icon {
+    margin-bottom: 28rpx;
+}
+.title {
+    text-align: left;
+    margin-bottom: 30rpx;
+}
+#system {
+    width: 528rpx;
+    margin-top: 36rpx;
+    padding: 40rpx 68rpx;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: .6rem;
+}
+#system>view {
+    flex: 0 0 33.33333%;
+    text-align: center;
+    margin-bottom: 48rpx;
+}
+#system image {
+    width: 100rpx;
+    height: 100rpx;
+    margin-bottom: 24rpx;
+}
+#system text {
+    display: block;
+}

@@ -40,7 +40,6 @@
 .vol-value {
   border-top-right-radius: .25rem;
   border-bottom-right-radius: .25rem;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.2);
 }
 .vol {
   flex: 0 0 50%;
@@ -78,7 +77,6 @@
     width: 78%;
     display: flex;
     padding: 40rpx;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.2);
   border-radius: .5rem;
 }
 #temperature image {

@@ -93,7 +93,7 @@
           </view>
         </view>
     </view>
-    <view id="temperature">
+    <view class="shadow" id="temperature">
         <view>
           <image src="/img/icon_temperature.png"></image>
         </view>
@@ -134,7 +134,7 @@
           <image src="/img/icon_chip.png"></image>
           <text>01</text>
         </view>
-        <view class="vol-value">
+        <view class="vol-value shadow">
           <text>0.016V</text>
         </view>
       </view>
@@ -143,7 +143,7 @@
           <image src="/img/icon_chip.png"></image>
           <text>01</text>
         </view>
-        <view class="vol-value text-primary">
+        <view class="vol-value shadow text-primary">
           <text>0.016V</text>
         </view>
       </view>
@@ -152,7 +152,7 @@
           <image src="/img/icon_chip.png"></image>
           <text>01</text>
         </view>
-        <view class="vol-value">
+        <view class="vol-value shadow">
           <text>0.016V</text>
         </view>
       </view>
@@ -161,7 +161,7 @@
           <image src="/img/icon_chip.png"></image>
           <text>01</text>
         </view>
-        <view class="vol-value text-danger">
+        <view class="vol-value shadow text-danger">
           <text>0.016V</text>
         </view>
       </view>
