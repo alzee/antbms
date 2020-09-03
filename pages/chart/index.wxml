@@ -14,11 +14,11 @@
     </view>
     <view id="dash">
       <view>
-        <image src="/img/pic_left.png"></image>
+        <image class="left" src="/img/pic_left.png"></image>
         <image src="/img/pic_v.png"></image>
       </view>
       <view>
-        <image src="/img/pic_right.png"></image>
+        <image class="right" src="/img/pic_right.png"></image>
         <image src="/img/pic_a.png"></image>
       </view>
     </view>

@@ -32,12 +32,18 @@
 #dash>view {
     position: relative;
 }
-#dash>view>image:first-child {
+.left, .right {
     position: absolute;
-    width: 460rpx;
-    height: 460rpx;
-    top: -66rpx;
-    left: -70rpx;
+    width: 470rpx;
+    height: 470rpx;
+}
+.left {
+    top: -70rpx;
+    left: -103rpx;
+}
+.right {
+    top: -74rpx;
+    right: -94rpx;
 }
 #dash>view>image:last-child {
     width: 330rpx;
