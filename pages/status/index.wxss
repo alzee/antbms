@@ -47,6 +47,8 @@
   border-bottom-left-radius: .25rem;
 }
 .vol-value {
+  display: flex;
+  align-items: center;
   border-top-right-radius: .25rem;
   border-bottom-right-radius: .25rem;
 }
