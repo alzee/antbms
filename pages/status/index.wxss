@@ -94,7 +94,6 @@
 }
 #temp-text>view {
     flex: 0 0 50%;
-    max-width: 45%;
 }
 #temp-text>view>text:first-child {
     display: inline-block;
@@ -149,5 +148,5 @@ text {
 }
 .label {
     display: inline-block;
-    width: 142rpx;
+    width: 152rpx;
 }
