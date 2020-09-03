@@ -17,7 +17,7 @@
             <text>总容量：</text>
             <text>35.886AH</text>
         </view>
-        <view>
+        <view id="mos">
             <view>
                 <text class="label">充电MOS：</text>
                 <text class="dot"></text>
