@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/setting/index",
     "pages/status/index",
     "pages/chart/index",
-    "pages/setting/index",
     "pages/control/index",
     "pages/login/index",
     "pages/logs/logs"

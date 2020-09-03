@@ -1,2 +1,8 @@
 <!--pages/setting/index.wxml-->
-<text>pages/setting/index.wxml</text>
+<view class="container">
+    <view class="list-item">
+      <image class="icon" src="/img/setting_icon1.png"></image>
+      <text>电芯特性</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+</view>
