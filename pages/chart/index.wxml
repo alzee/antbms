@@ -1,0 +1,26 @@
+<view class="container">
+    <view class="title" id="title1">
+        <text>动态曲线图</text>
+        <image src="/img/line2.png"></image>
+    </view>
+    <view id="chart">
+      <canvas>
+      </canvas>
+    </view>
+    <view class="title" id="title2">
+        <text>动态仪表图</text>
+        <image src="/img/line2.png"></image>
+    </view>
+    <view id="progress">
+    </view>
+    <view id="dash">
+      <view>
+        <image src="/img/pic_left.png"></image>
+        <image src="/img/pic_v.png"></image>
+      </view>
+      <view>
+        <image src="/img/pic_right.png"></image>
+        <image src="/img/pic_a.png"></image>
+      </view>
+    </view>
+</view>
