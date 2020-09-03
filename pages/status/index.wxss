@@ -39,7 +39,8 @@
     height: 24px;
 }
 .vol-num, .vol-value {
-  padding: .3em .6em;
+  padding: .2em .6em;
+  height: 64rpx;
 }
 .vol-num {
   border-top-left-radius: .25rem;
