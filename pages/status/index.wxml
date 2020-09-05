@@ -12,10 +12,27 @@
     </view>
     <view id="dash">
         <view id="progress">
-            <progress percent="75" stroke-width="8"/>
-            <text>SOC</text>
-            <text>总容量：</text>
-            <text>35.886AH</text>
+          <view class="circle-wrapper">
+            <view class="circle circle-bg"></view>
+            <view class="circle circle-bar"></view>
+            <view class="circle-cap">
+              <view>
+                <text>SOC</text>
+              </view>
+              <view>
+                <text class="text-primary">75%</text>
+              </view>
+            </view>
+          </view>
+
+          <view class="total-cap">
+            <text>
+              总容量
+            </text>
+            <text class="text-primary">
+              35.886AH
+            </text>
+          </view>
         </view>
         <view id="mos">
             <view>
