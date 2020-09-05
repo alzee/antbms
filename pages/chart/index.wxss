@@ -20,7 +20,6 @@
 #progress {
     width: 320rpx;
     height: 112rpx;
-    background-color: red;
     margin-bottom: 14rpx;
 }
 #dash {
@@ -48,4 +47,58 @@
 #dash>view>image:last-child {
     width: 330rpx;
     height: 330rpx;
+}
+
+.circle-wrapper{
+    width: 320rpx;
+    height: 112rpx;
+    overflow: hidden;
+    position: relative;
+}
+.circle{
+    width: 280rpx;
+    height: 280rpx;
+    border:20rpx solid transparent;
+    border-radius: 50%;
+    /*
+    position: absolute;
+    top:0;
+    -webkit-transform: rotate(-225deg);
+    */
+}
+.circle-bg{
+  position: absolute;
+  top:0;
+  border-top:20rpx solid #cbcbcb;
+  border-right:20rpx solid #cbcbcb;
+  -webkit-transform: rotate(-45deg);
+}
+.circle-bar{
+  border-top:20rpx solid #008aff;
+  border-right:20rpx solid #008aff;
+  -webkit-animation: circleProgressLoad_right 1s linear 1 forwards;
+  /*
+  right:0;
+  */
+}
+@-webkit-keyframes circleProgressLoad_right{
+  0%{
+    -webkit-transform: rotate(-225deg);
+  }
+  50%,100%{
+    -webkit-transform: rotate(-95deg);
+  }
+}
+.circle-cap {
+  position: absolute;
+  bottom: -10rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.circle-cap text {
+    font-size: 32rpx;
+}
+.circle-cap text.text-primary {
+    font-size: 40rpx;
 }
