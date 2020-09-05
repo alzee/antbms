@@ -164,6 +164,7 @@ text {
     height: 160rpx;
     overflow: hidden;
     position: relative;
+    margin-top: 20rpx;
 }
 .circle{
     width: 260rpx;
