@@ -14,6 +14,7 @@
       <view class="circle-wrapper">
         <view class="circle circle-bg"></view>
         <view class="circle circle-bar"></view>
+      </view>
         <view class="circle-cap">
           <view>
             <text>SOC</text>
@@ -22,7 +23,6 @@
             <text class="text-primary">75%</text>
           </view>
         </view>
-      </view>
     </view>
     <view id="dash">
       <view>

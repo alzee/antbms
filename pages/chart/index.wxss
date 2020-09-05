@@ -21,6 +21,7 @@
     width: 320rpx;
     height: 112rpx;
     margin-bottom: 14rpx;
+    position: relative;
 }
 #dash {
     width: 92%;
@@ -91,7 +92,7 @@
 }
 .circle-cap {
   position: absolute;
-  bottom: -10rpx;
+  bottom: -25rpx;
   left: 0;
   right: 0;
   text-align: center;
