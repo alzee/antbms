@@ -171,11 +171,6 @@ text {
     height: 260rpx;
     border:20rpx solid transparent;
     border-radius: 50%;
-    /*
-    position: absolute;
-    top:0;
-    -webkit-transform: rotate(-225deg);
-    */
 }
 .circle-bg{
   position: absolute;
