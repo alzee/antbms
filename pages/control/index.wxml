@@ -33,19 +33,19 @@
     </view>
     <view>
       <image src="/img/icon_operation2.png"></image>
-      <text>重启系统</text>
+      <text>关闭系统</text>
     </view>
     <view>
       <image src="/img/icon_operation3.png"></image>
-      <text>重启系统</text>
+      <text>屏幕切换</text>
     </view>
     <view>
       <image src="/img/icon_operation4.png"></image>
-      <text>重启系统</text>
+      <text>自动均衡</text>
     </view>
     <view>
       <image src="/img/icon_operation5.png"></image>
-      <text>重启系统</text>
+      <text>电流归零</text>
     </view>
   </view> 
 </view>
