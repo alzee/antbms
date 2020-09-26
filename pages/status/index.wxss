@@ -182,10 +182,9 @@ text {
 .circle-bar{
   border-top:20rpx solid #008aff;
   border-right:20rpx solid #008aff;
+/*
   -webkit-animation: circleProgressLoad_right 1s linear 1 forwards;
-  /*
-  right:0;
-  */
+*/
 }
 @-webkit-keyframes circleProgressLoad_right{
   0%{

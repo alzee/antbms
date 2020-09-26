@@ -20,7 +20,7 @@
                 <text>SOC</text>
               </view>
               <view>
-                <text class="text-primary">75%</text>
+                <text class="text-primary">{{ Soc }}%</text>
               </view>
             </view>
           </view>

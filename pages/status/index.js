@@ -12,16 +12,21 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        var cssRule;
-        console.log();
         var that = this;
+        var Soc;
         wx.request({
             url: getApp().globalData.url + '/GetSingleEquipment',
             success(res){
                 console.log(res.data.Data);
                 that.setData(res.data.Data);
+                Soc = res.data.Data.Soc;
+                that.animate('.circle-bar', [
+                    {rotate: -225},
+                    {rotate: -225 + (180 * Soc / 100)},
+                ],800);
             }
-        })
+        });
+        
     },
 
     /**
