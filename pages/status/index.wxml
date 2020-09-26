@@ -56,35 +56,35 @@
         <view>
           <image src="/img/icon_totalvoltage.png"></image>
           <view>
-            <text>56.7 V</text>
+            <text>{{ Zdy }} V</text>
             <text>总电压</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_electriccurrent.png"></image>
           <view>
-            <text>56.7 V</text>
+            <text>{{ Dl }} V</text>
             <text>电流</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_power.png"></image>
           <view>
-            <text>56.7 V</text>
+            <text>{{ Gl }} V</text>
             <text>功率</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_maximumvoltage.png"></image>
           <view>
-            <text>56.7 V</text>
+            <text>{{ ZgDtDy }} V</text>
             <text>最高电压</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_minimumvoltage.png"></image>
           <view>
-            <text>56.7 V</text>
+            <text>{{ ZdDtDy }} V</text>
             <text>最低电压</text>
           </view>
         </view>
@@ -92,7 +92,7 @@
           <image src="/img/icon_differentialpressure.png"></image>
           <view>
             <text>56.7 V</text>
-            <text>平均电压</text>
+            <text>{{ PjDtDy }}</text>
           </view>
         </view>
         <view>
