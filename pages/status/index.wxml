@@ -146,40 +146,13 @@
         <text>单体电压</text>
     </view>
     <view id="voltage">
-      <view class="vol">
-        <view class="vol-num bg-primary">
+      <view class="vol" wx:for="{{dy}}">
+        <view class="vol-num bg-primary bg-green">
           <image src="/img/icon_chip.png"></image>
-          <text>01</text>
+          <text>{{index < 10 ? '0' + index : index}}</text>
         </view>
-        <view class="vol-value shadow">
-          <text>0.016V</text>
-        </view>
-      </view>
-      <view class="vol">
-        <view class="vol-num bg-green">
-          <image src="/img/icon_chip.png"></image>
-          <text>02</text>
-        </view>
-        <view class="vol-value shadow text-primary">
-          <text>0.016V</text>
-        </view>
-      </view>
-      <view class="vol">
-        <view class="vol-num bg-primary">
-          <image src="/img/icon_chip.png"></image>
-          <text>03</text>
-        </view>
-        <view class="vol-value shadow">
-          <text>0.016V</text>
-        </view>
-      </view>
-      <view class="vol">
-        <view class="vol-num bg-primary">
-          <image src="/img/icon_chip.png"></image>
-          <text>04</text>
-        </view>
-        <view class="vol-value shadow text-danger">
-          <text>0.016V</text>
+        <view class="vol-value shadow text-primary text-danger">
+          <text>{{item}}V</text>
         </view>
       </view>
     </view>

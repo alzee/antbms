@@ -17,13 +17,28 @@ Page({
         wx.request({
             url: getApp().globalData.url + '/GetSingleEquipment',
             success(res){
-                console.log(res.data.Data);
-                that.setData(res.data.Data);
                 Soc = res.data.Data.Soc;
                 that.animate('.circle-bar', [
                     {rotate: -225},
                     {rotate: -225 + (180 * Soc / 100)},
                 ],800);
+
+                var dy = {};
+                for (var i in res.data.Data) {
+                    if (i.indexOf('DY') == 0) {
+                        var j = i.replace('DY', '');
+                        dy[j] = res.data.Data[i];
+                    }
+                };
+                res.data.Data.dy = dy;
+
+                var wd = {};
+                for (var i in res.data.Data) {
+                    if (i.indexOf('Wd') == 0 && i != 'WdZb') wd[i] = res.data.Data[i];
+                };
+                res.data.Data.wd = wd;
+                that.setData(res.data.Data);
+                console.log(res.data.Data);
             }
         });
         
