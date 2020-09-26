@@ -145,7 +145,8 @@
 text {
     font-size: 26rpx;
 }
-.dot {
+.circle-fill-grey,
+.circle-fill-green {
     display: inline-block;
     width: 28rpx;
     height: 28rpx;
@@ -153,6 +154,15 @@ text {
     margin-left: 28rpx;
     margin-right: 16rpx;
     background-color: #58e520 !important;
+}
+.text-green {
+    color: #58e520;
+}
+.text-grey {
+    color: #cbcbcb;
+}
+.circle-fill-grey {
+    background-color: #cbcbcb !important;
 }
 .label {
     display: inline-block;

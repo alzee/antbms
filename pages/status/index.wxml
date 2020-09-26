@@ -37,18 +37,36 @@
         <view id="mos">
             <view>
                 <text class="label">充电MOS：</text>
-                <text class="dot"></text>
-                <text>开启</text>
+                <block wx:if="{{CdMosZt == 1}}">
+                    <text class="circle-fill-green"></text>
+                    <text class="text-green">开启</text>
+                </block>
+                <block wx:else>
+                    <text class="circle-fill-grey"></text>
+                    <text class="text-grey">关闭</text>
+                </block>
             </view>
             <view>
                 <text class="label">放电MOS：</text>
-                <text class="dot"></text>
-                <text>开启</text>
+                <block wx:if="{{FdMosZt == 1}}">
+                    <text class="circle-fill-green"></text>
+                    <text class="text-green">开启</text>
+                </block>
+                <block wx:else>
+                    <text class="circle-fill-grey"></text>
+                    <text class="text-grey">关闭</text>
+                </block>
             </view>
             <view>
                 <text class="label">均衡：</text>
-                <text class="dot"></text>
-                <text>开启</text>
+                <block wx:if="{{JhZt == 1}}">
+                    <text class="circle-fill-green"></text>
+                    <text class="text-green">开启</text>
+                </block>
+                <block wx:else>
+                    <text class="circle-fill-grey"></text>
+                    <text class="text-grey">关闭</text>
+                </block>
             </view>
         </view>
     </view>
