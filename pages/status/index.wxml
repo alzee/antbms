@@ -91,8 +91,8 @@
         <view>
           <image src="/img/icon_differentialpressure.png"></image>
           <view>
-            <text>56.7 V</text>
-            <text>{{ PjDtDy }}</text>
+            <text>{{ PjDtDy }} V</text>
+            <text>平均电压</text>
           </view>
         </view>
         <view>
