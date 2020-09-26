@@ -5,13 +5,21 @@ Page({
      * 页面的初始数据
      */
     data: {
-
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        var that = this
+        wx.request({
+            url: getApp().globalData.url + '/UserLogin',
+            success(res){
+                console.log(res.data.Data);
+                console.log(getApp().globalData.url);
+                that.setData(res.data.Data);
+            }
+        })
 
     },
 

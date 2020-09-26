@@ -34,6 +34,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    url: "https://api.itove.com/antbms",
+    //url: "http://www.mayibms.com:8081/AntService.asmx"
   }
 })
