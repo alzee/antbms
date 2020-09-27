@@ -37,6 +37,7 @@ Page({
                     if (i.indexOf('Wd') == 0 && i != 'WdZb') wd[i] = res.data.Data[i];
                 };
                 res.data.Data.wd = wd;
+                getApp().globalData.data = res.data.Data;
                 that.setData(res.data.Data);
                 console.log(res.data.Data);
             }

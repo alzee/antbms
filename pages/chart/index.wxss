@@ -45,7 +45,7 @@
     top: -74rpx;
     right: -94rpx;
 }
-#dash>view>image:last-child {
+.dash-pic {
     width: 330rpx;
     height: 330rpx;
 }
@@ -77,9 +77,8 @@
 .circle-bar{
   border-top:20rpx solid #008aff;
   border-right:20rpx solid #008aff;
-  -webkit-animation: circleProgressLoad_right 1s linear 1 forwards;
   /*
-  right:0;
+  -webkit-animation: circleProgressLoad_right 1s linear 1 forwards;
   */
 }
 @-webkit-keyframes circleProgressLoad_right{
@@ -102,4 +101,28 @@
 }
 .circle-cap text.text-primary {
     font-size: 40rpx;
+}
+.text-sub, .text-sup {
+    position: absolute;
+    left: 40%;
+    border: grey 1px solid;
+    border-radius: .25rem;
+    padding: 0 10rpx;
+    font-size: 24rpx;
+}
+.text-sup {
+    top: 26%;
+}
+.text-sub {
+    bottom: 26%;
+}
+.text-left {
+    border-left: none;
+}
+.text-right {
+    border-right: none;
+}
+.pointer {
+    position: absolute;
+    display: none;
 }

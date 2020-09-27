@@ -20,18 +20,27 @@
             <text>SOC</text>
           </view>
           <view>
-            <text class="text-primary">75%</text>
+            <text class="text-primary">{{Soc}}%</text>
           </view>
         </view>
     </view>
     <view id="dash">
       <view>
         <image class="left" src="/img/pic_left.png"></image>
-        <image src="/img/pic_v.png"></image>
+        <image class="dash-pic" src="/img/pic_v.png"></image>
+        <text class="text-primary text-sup text-left">{{Zdy}}</text>
+        <text class="text-primary text-sub text-left">{{ZgDtDy}}</text>
+        <view class="pointer">
+            <image src="/img/v_pointer.png"></image>
+        </view>
       </view>
       <view>
         <image class="right" src="/img/pic_right.png"></image>
-        <image src="/img/pic_a.png"></image>
+        <image class="dash-pic" src="/img/pic_a.png"></image>
+        <text class="text-primary text-sup text-right">{{Dl}}</text>
+        <view class="pointer">
+            <image src="/img/a_pointer.png"></image>
+        </view>
       </view>
     </view>
 </view>

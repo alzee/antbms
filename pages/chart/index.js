@@ -87,5 +87,13 @@ Page({
                 lineStyle: 'curve'
             }
         });
+
+        this.setData(app.globalData.data);
+        var Soc = this.data.Soc;
+        this.animate('.circle-bar', [
+            {rotate: -225},
+            {rotate: -225 + (180 * Soc / 100)},
+        ],800);
+        console.log(app.globalData.data);
     }
 });
