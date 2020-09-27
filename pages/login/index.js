@@ -55,18 +55,25 @@ Page({
             method: "POST",
             success: (res) => {
                 if (res && res.header && res.header['Set-Cookie']) {
+                //if (1) {
                     wx.setStorageSync('sessionid', res.header['Set-Cookie']);
                     wx.showToast({
                         title: '成功',
                         icon: 'success',
                         duration: 2000
-                    })
+                    });
+                    setTimeout(() => {
+                        wx.switchTab({
+                            url: "../status/index"
+                        })
+                    },500
+                    );
                 } else {
                     wx.showToast({
                         title: '账号或密码错误',
                         icon: 'none',
                         duration: 2000
-                    })
+                    });
                 }
                 console.log(res);
             },
