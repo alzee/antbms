@@ -1,8 +1,17 @@
 <!--pages/setting/index.wxml-->
 <view class="container">
     <view class="list-item">
-      <image class="icon" src="/img/setting_icon1.png"></image>
-      <text>电芯特性</text>
+      <text>恢复出场设置</text>
+    </view>
+    <view class="list-item">
+      <text>升级固件</text>
+    </view>
+    <view class="list-item" bindtap="gotoPage" data-page="about">
+      <text>关于我们</text>
+      <image class="arrow" src="/img/setting_next.png"></image>
+    </view>
+    <view class="list-item" bindtap="gotoPage" data-page="../login/index">
+      <text>验证密码和修改密码</text>
       <image class="arrow" src="/img/setting_next.png"></image>
     </view>
 </view>

@@ -1,0 +1,38 @@
+.header {
+    text-align: center;
+    margin: 72rpx 0;
+}
+.logo {
+    width: 160rpx;
+    height: 160rpx;
+    margin-bottom: 20rpx;
+}
+.version {
+    display: block;
+    font-size: 24rpx;
+}
+.main {
+    margin: 0 20rpx;
+}
+.main>text {
+    text-indent: 56rpx;
+    display: block;
+    font-size: 28rpx;
+    line-height: 48rpx;
+}
+.main text:last-child {
+    margin-top: 8rpx;
+    text-indent: 0;
+}
+.link {
+    font-size: 26rpx;
+}
+.footer {
+    text-align: center;
+    margin: 88rpx auto;
+    color: #999999;
+    font-size: 22rpx;
+}
+.footer text {
+    display: block;
+}

@@ -1,0 +1,56 @@
+/* pages/setting/index.wxss */
+text {
+    font-size: 26rpx;
+}
+#title {
+    width: 83%;
+    margin: 0 28rpx;
+    display: flex;
+    justify-content: space-between;
+    background-color: #cbcbcb;
+    padding: 24rpx 40rpx;
+}
+#title>text {
+    display: block;
+    color: #ffffff;
+}
+.list-item {
+    width: 93%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: #dbdbdb 1rpx solid;
+}
+.list-item>view {
+    display: flex;
+}
+.list-item input {
+    border: #dbdbdb 1rpx solid;
+    border-radius: .25rem;
+    width: 120rpx;
+    height: 60rpx;
+    font-size: 26rpx;
+    text-align: center;
+    margin-right: 30rpx;
+}
+.input-placeholder {
+    font-size: 26rpx;
+    color: #000000;
+}
+.list-item button {
+    width: 88rpx !important;
+    height: 60rpx;
+    color: #ffffff;
+    font-size: 26rpx;
+    margin: 0 !important;
+    padding: 10rpx 0 !important;
+    font-weight: 0 !important;
+}
+.list-item>text {
+    display: block;
+}
+.arrow {
+    width: 20rpx;
+    height: 32rpx;
+}

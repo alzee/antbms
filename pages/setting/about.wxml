@@ -1,0 +1,18 @@
+<!--pages/setting/index.wxml-->
+<view class="container">
+    <view class="header">
+        <image class="logo" src="/img/icon_logo.png"></image>
+        <text class="version text-primary">版本号: v1.1</text>
+    </view>
+    <view class="main">
+        <text>蚂蚁兴能起源于2014年，至今为止，线上只能BMS销量NO.1。随着公司的发展壮大，融合了深圳沃特玛，比亚迪，霍英东研究所等新能源行业人才。实现了从软硬件研发，PCB 贴片，到线上线下销售一条龙服务。</text>
+        <text>同时公司构建了自己的采购体系，与原厂，代理商建立了良好的合作关系，保证了产品的品质和交期。</text>
+        <text>公司主打产品为低压BMS，主要在 24串 以下应用，累计出货 50K+。</text>
+        <text>广泛应用于低速车，低压储能，电动摩托车 等锂电市场。</text>
+        <text>蚂蚁兴能官网: <text class="link text-primary">http://www.mayibms.com</text></text>
+    </view>
+    <view class="footer">
+        <text>Copyright 2020 十堰小蚂蚁电子科技有限公司版权所有</text>
+        <text>备案号: 鄂ICP备13072051号-1</text>
+    </view>
+</view>

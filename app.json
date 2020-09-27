@@ -15,6 +15,7 @@
     "pages/setting/8",
     "pages/setting/9",
     "pages/setting/10",
+    "pages/setting/about",
     "pages/logs/logs"
   ],
   "window":{
@@ -50,12 +51,6 @@
       {
         "pagePath": "pages/control/index",
         "text": "控制",
-        "iconPath": "img/icon_tab4.png",
-        "selectedIconPath": "img/icon_tab4_select.png"
-      },
-      {
-        "pagePath": "pages/login/index",
-        "text": "登录",
         "iconPath": "img/icon_tab4.png",
         "selectedIconPath": "img/icon_tab4_select.png"
       }

@@ -10,7 +10,7 @@
       <text>保护参数</text>
       <image class="arrow" src="/img/setting_next.png"></image>
     </view>
-    <view class="list-item" bindtap="gotoPage" data-page="3">
+    <view class="list-item" bindtap="" data-page="3">
       <image class="icon" src="/img/setting_icon3.png"></image>
       <text>告警参数</text>
       <image class="arrow" src="/img/setting_next.png"></image>
