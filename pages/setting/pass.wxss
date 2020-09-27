@@ -1,0 +1,62 @@
+/* pages/login/index.wxss */
+.swiper-tab {
+    width: 80%;
+    text-align: center;
+} 
+.swiper-tab-list {
+    display: inline-block;
+    width: 33.33%; 
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    padding-bottom: .5rem;
+}
+input {
+    padding-bottom: .5rem;
+}
+.on {
+    color: #007bff;
+    border-bottom: #007bff 2px solid;
+}
+.swiper-box {
+    display: block;
+    width: 80%;
+    overflow: hidden;
+}
+.swiper-box view {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+}
+.pass-lock {
+    width: 20px;
+    height: 20px;
+}
+.input-pass {
+    display: flex;
+    justify-content: center;
+}
+.swiper-tab, .input-pass {
+    border-bottom: #dbdbdb 1px solid;
+    margin-bottom: 2rem;
+}
+.login-submit {
+    background-color: #007bff;
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+    color: #fff;
+    width: 100% !important;
+}
+.pass-lock {
+    margin-right: 1rem;
+}

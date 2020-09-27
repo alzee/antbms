@@ -1,3 +1,5 @@
+var appData = getApp().globalData;
+
 Page({
     data: {
         winWidth: 0,
@@ -5,12 +7,17 @@ Page({
         currentTab: 0,
     },
     onLoad: function() {
+        wx.setStorageSync("sessionid", "fuck");
+        //console.log(wx.getStorageSync("sessionid"));
+        wx.clearStorage();
+        if (wx.getStorageSync("sessionid")) {
+            wx.switchTab({
+                url: "../status/index"
+            });
+        }
 
         var that = this;
 
-        /**
-         * 获取当前设备的宽高
-         */
         wx.getSystemInfo( {
 
             success: function( res ) {
@@ -22,8 +29,39 @@ Page({
 
         });
     },
+    formSubmit: function(e) {
+        console.log(e.detail.value);
+        var date = new Date();
+        var y = date.getFullYear();
+        var m = date.getMonth()+1;
+        var d = date.getDate();
+        var h = date.getHours();
+        var min = date.getMinutes();
+        var s = date.getSeconds();
+        m = m < 10 ? '0' + m : m;
+        d = d < 10 ? '0' + d : d;
+        h = h < 10 ? '0' + h : h;
+        min = min < 10 ? '0' + min : min;
+        s = s < 10 ? '0' + s : s;
+        var time = y + '' + m + '' + d + '' + h + '' + min + '' + s;
+        wx.request({
+            url: appData.url + '/UserLogin',
+            data: {
+                Username: e.detail.value.Username,
+                Pwd: e.detail.value.Pwd,
+                Time: time,
+            },
+            header: { 'Content-Type': 'application/x-www-form-urlencoded'},
+            method: "POST",
+            success: (res) => {
+                if (res && res.header && res.header['Set-Cookie']) {
+                    wx.setStorageSync('sessionid', res.header['Set-Cookie']);
+                }
+                console.log(res);
+            }
+        });
+    },
       
- //  tab切换逻辑
     swichNav: function( e ) {
 
         var that = this;

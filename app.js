@@ -1,9 +1,9 @@
 //app.js
 App({
   onLaunch: function () {
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    var logs = wx.getStorageSync('logs') || [];
+    logs.unshift(Date.now());
+    wx.setStorageSync('logs', logs);
 
     wx.login({
       success: res => {
@@ -14,7 +14,7 @@ App({
                       code: res.code
                   },
                   success (res) {
-                      console.log(res.data.Data);
+                      //console.log(res.data.Data);
                   }
               })
           }

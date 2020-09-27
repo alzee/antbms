@@ -10,7 +10,7 @@
       <text>关于我们</text>
       <image class="arrow" src="/img/setting_next.png"></image>
     </view>
-    <view class="list-item" bindtap="gotoPage" data-page="../login/index">
+    <view class="list-item" bindtap="gotoPage" data-page="pass">
       <text>验证密码和修改密码</text>
       <image class="arrow" src="/img/setting_next.png"></image>
     </view>
