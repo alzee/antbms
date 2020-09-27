@@ -39,7 +39,7 @@ Page({
                 res.data.Data.wd = wd;
                 getApp().globalData.data = res.data.Data;
                 that.setData(res.data.Data);
-                console.log(res.data.Data);
+                //console.log(res.data.Data);
             }
         });
         
