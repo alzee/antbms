@@ -6,7 +6,7 @@
         <text>设定参数</text>
     </view>
     <view class="list-item">
-      <text>充电高温恢复</text>
+      <text>铁锂参数</text>
       <text>55℃</text>
       <view>
           <input placeholder="55" />
@@ -14,7 +14,7 @@
       </view>
     </view>
     <view class="list-item">
-      <text>充电高温恢复</text>
+      <text>三元参数</text>
       <text>55℃</text>
       <view>
           <input placeholder="55" />
@@ -22,7 +22,7 @@
       </view>
     </view>
     <view class="list-item">
-      <text>充电高温恢复</text>
+      <text>钛酸锂参数</text>
       <text>55℃</text>
       <view>
           <input placeholder="55" />
@@ -30,7 +30,7 @@
       </view>
     </view>
     <view class="list-item">
-      <text>充电高温恢复</text>
+      <text>电池物理容量</text>
       <text>55℃</text>
       <view>
           <input placeholder="55" />
@@ -38,7 +38,7 @@
       </view>
     </view>
     <view class="list-item">
-      <text>充电高温恢复</text>
+      <text>初始SOC</text>
       <text>55℃</text>
       <view>
           <input placeholder="55" />
@@ -46,7 +46,7 @@
       </view>
     </view>
     <view class="list-item">
-      <text>充电高温恢复</text>
+      <text>连接串数</text>
       <text>55℃</text>
       <view>
           <input placeholder="55" />
@@ -54,23 +54,7 @@
       </view>
     </view>
     <view class="list-item">
-      <text>充电高温恢复</text>
-      <text>55℃</text>
-      <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
-      </view>
-    </view>
-    <view class="list-item">
-      <text>充电高温恢复</text>
-      <text>55℃</text>
-      <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
-      </view>
-    </view>
-    <view class="list-item">
-      <text>充电高温恢复</text>
+      <text>总循环容量</text>
       <text>55℃</text>
       <view>
           <input placeholder="55" />

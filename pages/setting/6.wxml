@@ -1,8 +1,40 @@
 <!--pages/setting/index.wxml-->
 <view class="container">
+    <view id="title">
+        <text>项目</text>
+        <text>机器参数</text>
+        <text>设定参数</text>
+    </view>
     <view class="list-item">
-      <image class="icon" src="/img/setting_icon1.png"></image>
-      <text>电芯特性</text>
-      <image class="arrow" src="/img/setting_next.png"></image>
+      <text>均衡开启电压</text>
+      <text>55℃</text>
+      <view>
+          <input placeholder="55" />
+          <button class="bg-primary">设置</button>
+      </view>
+    </view>
+    <view class="list-item">
+      <text>均衡电流</text>
+      <text>55℃</text>
+      <view>
+          <input placeholder="55" />
+          <button class="bg-primary">设置</button>
+      </view>
+    </view>
+    <view class="list-item">
+      <text>均衡极限电压</text>
+      <text>55℃</text>
+      <view>
+          <input placeholder="55" />
+          <button class="bg-primary">设置</button>
+      </view>
+    </view>
+    <view class="list-item">
+      <text>均衡开启压差</text>
+      <text>55℃</text>
+      <view>
+          <input placeholder="55" />
+          <button class="bg-primary">设置</button>
+      </view>
     </view>
 </view>
