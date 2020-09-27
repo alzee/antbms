@@ -50,3 +50,6 @@ text {
 .list-item>text {
     display: block;
 }
+.list-item>text:first-child {
+    width: 24%;
+}
