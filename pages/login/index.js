@@ -56,9 +56,20 @@ Page({
             success: (res) => {
                 if (res && res.header && res.header['Set-Cookie']) {
                     wx.setStorageSync('sessionid', res.header['Set-Cookie']);
+                    wx.showToast({
+                        title: '成功',
+                        icon: 'success',
+                        duration: 2000
+                    })
+                } else {
+                    wx.showToast({
+                        title: '账号或密码错误',
+                        icon: 'none',
+                        duration: 2000
+                    })
                 }
                 console.log(res);
-            }
+            },
         });
     },
       
