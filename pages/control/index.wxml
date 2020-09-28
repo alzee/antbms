@@ -1,9 +1,9 @@
 <!--pages/control/index.wxml-->
 <view class="container">
   <view class="shadow" id="switch"> 
-    <view>
+    <view bindtap="controlAction" data-act="charge" data-actzh="{{charge}}">
       <view class="title">
-        <text>充电开关</text>
+        <text>{{charge}}</text>
       </view>
       <view class="icon">
         <image src="/img/icon_charge_open.png"></image>
@@ -13,9 +13,9 @@
         <text>已打开</text>
       </view>
     </view>
-    <view>
+    <view bindtap="controlAction" data-act="discharge" data-actzh="{{discharge}}">
       <view class="title">
-        <text>放电开关</text>
+        <text>{{discharge}}</text>
       </view>
       <view class="icon">
         <image src="/img/icon_discharge_open.png"></image>
@@ -27,25 +27,25 @@
     </view>
   </view> 
   <view class="shadow" id="system"> 
-    <view>
+    <view bindtap="controlAction" data-act="reboot" data-actzh="{{reboot}}">
       <image src="/img/icon_operation1.png"></image>
-      <text>重启系统</text>
+      <text>{{reboot}}</text>
     </view>
-    <view>
+    <view bindtap="controlAction" data-act="shutdown" data-actzh="{{shutdown}}">
       <image src="/img/icon_operation2.png"></image>
-      <text>关闭系统</text>
+      <text>{{shutdown}}</text>
     </view>
-    <view>
+    <view bindtap="controlAction" data-act="screen" data-actzh="{{screen}}">
       <image src="/img/icon_operation3.png"></image>
-      <text>屏幕切换</text>
+      <text>{{screen}}</text>
     </view>
-    <view>
+    <view bindtap="controlAction" data-act="balance" data-actzh="{{balance}}">
       <image src="/img/icon_operation4.png"></image>
-      <text>自动均衡</text>
+      <text>{{balance}}</text>
     </view>
-    <view>
+    <view bindtap="controlAction" data-act="zero" data-actzh="{{zero}}">
       <image src="/img/icon_operation5.png"></image>
-      <text>电流归零</text>
+      <text>{{zero}}</text>
     </view>
   </view> 
 </view>

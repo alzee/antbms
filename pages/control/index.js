@@ -1,74 +1,96 @@
 // pages/control/index.js
 Page({
 
-    /**
-     * 页面的初始数据
-     */
     data: {
+        charge: '充电开关',
+        discharge: '放电开关',
+        reboot: '重启系统',
+        shutdown: '关闭系统',
+        screen: '屏幕切换',
+        balance: '自动均衡',
+        zero: '电流归零',
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function (options) {
-        var that = this
-        wx.request({
-            url: getApp().globalData.url + '/UserLogin',
-            success(res){
-                console.log(res.data.Data);
-                console.log(getApp().globalData.url);
-                that.setData(res.data.Data);
-            }
-        })
 
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
     onReady: function () {
 
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
     onShow: function () {
 
     },
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
     onHide: function () {
 
     },
 
-    /**
-     * 生命周期函数--监听页面卸载
-     */
     onUnload: function () {
 
     },
 
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
     onPullDownRefresh: function () {
 
     },
 
-    /**
-     * 页面上拉触底事件的处理函数
-     */
     onReachBottom: function () {
 
     },
 
-    /**
-     * 用户点击右上角分享
-     */
     onShareAppMessage: function () {
+
+    },
+
+    controlAction: function(e) {
+        var act = e.currentTarget.dataset.act;
+        var actzh = e.currentTarget.dataset.actzh;
+        console.log(e);
+        //var actzh = act;
+        switch (act) {
+            case 'charge':
+            case 'discharge':
+                wx.showModal({
+                    title: actzh,
+                    content: '是否确定要进行"' + actzh + '"操作？',
+                    icon: 'loading',
+                    success(res){
+                        if (res.confirm) {
+                            wx.showToast({
+                                icon: 'loading',
+                            });
+                            wx.request({
+                                url: getApp().globalData.url + '/UserLogin',
+                                data: {},
+                                method: 'POST',
+                                success: function(){
+                                    wx.showToast({
+                                        title: '"' + actzh + '"操作已完成',
+                                        icon: 'none',
+                                    });
+                                }
+                            });
+                        }
+                    }
+                });
+                break;
+            default:
+                wx.showToast({
+                    icon: 'loading',
+                });
+                wx.request({
+                    url: 'https://api.itove.com/antbms/UserLogin',
+                    data: {},
+                    method: 'POST',
+                    success: function(){
+                        wx.showToast({
+                            title: '"' + actzh + '"操作已完成',
+                            icon: 'none',
+                        });
+                    }
+                });
+        }
 
     }
 })
