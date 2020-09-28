@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/map/index",
     "pages/login/index",
     "pages/status/index",
     "pages/chart/index",
@@ -18,6 +17,7 @@
     "pages/setting/9",
     "pages/setting/10",
     "pages/setting/about",
+    "pages/map/index",
     "pages/logs/logs"
   ],
   "window":{
@@ -53,6 +53,12 @@
       {
         "pagePath": "pages/control/index",
         "text": "控制",
+        "iconPath": "img/icon_tab4.png",
+        "selectedIconPath": "img/icon_tab4_select.png"
+      },
+      {
+        "pagePath": "pages/map/index",
+        "text": "地图监控",
         "iconPath": "img/icon_tab4.png",
         "selectedIconPath": "img/icon_tab4_select.png"
       }
