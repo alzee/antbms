@@ -17,6 +17,7 @@
     "pages/setting/9",
     "pages/setting/10",
     "pages/setting/about",
+    "pages/map/index",
     "pages/logs/logs"
   ],
   "window":{
