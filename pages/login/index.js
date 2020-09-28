@@ -7,9 +7,9 @@ Page({
         currentTab: 0,
     },
     onLoad: function() {
-        wx.setStorageSync("sessionid", "fuck");
+        //wx.setStorageSync("sessionid", "sometoken");
         //console.log(wx.getStorageSync("sessionid"));
-        wx.clearStorage();
+        //wx.clearStorage();
         if (wx.getStorageSync("sessionid")) {
             wx.switchTab({
                 url: "../status/index"
