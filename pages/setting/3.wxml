@@ -1,8 +1,0 @@
-<!--pages/setting/index.wxml-->
-<view class="container">
-    <view id="title">
-        <text>项目</text>
-        <text>机器参数</text>
-        <text>设定参数</text>
-    </view>
-</view>
