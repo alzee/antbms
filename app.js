@@ -7,17 +7,6 @@ App({
 
     wx.login({
       success: res => {
-          if (res.code) {
-              wx.request({
-                  url: 'https://api.itove.com/antbms/UserLogin',
-                  data: {
-                      code: res.code
-                  },
-                  success (res) {
-                      //console.log(res.data.Data);
-                  }
-              })
-          }
       }
     })
     wx.getSetting({
