@@ -5,7 +5,18 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        list: [
+            { num: '1', img: '/img/setting_icon1.png', title: '电芯特性'},
+            { num: '2', img: '/img/setting_icon2.png', title: '保护参数'},
+            { num: '3', img: '/img/setting_icon3.png', title: '告警参数'},
+            { num: '4', img: '/img/setting_icon4.png', title: '温度保护'},
+            { num: '5', img: '/img/setting_icon5.png', title: 'BMS硬件参数'},
+            { num: '6', img: '/img/setting_icon6.png', title: '均衡控制'},
+            { num: '7', img: '/img/setting_icon7.png', title: 'SOC静态表'},
+            { num: '8', img: '/img/setting_icon8.png', title: '连接内阻'},
+            { num: '9', img: '/img/setting_icon9.png', title: '霍尔测速'},
+            { num: '10', img: '/img/setting_icon10.png', title: '系统'},
+        ],
     },
 
     gotoPage: function(e) {
