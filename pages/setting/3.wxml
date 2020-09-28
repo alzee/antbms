@@ -1,8 +1,8 @@
 <!--pages/setting/index.wxml-->
 <view class="container">
-    <view class="list-item">
-      <image class="icon" src="/img/setting_icon1.png"></image>
-      <text>电芯特性</text>
-      <image class="arrow" src="/img/setting_next.png"></image>
+    <view id="title">
+        <text>项目</text>
+        <text>机器参数</text>
+        <text>设定参数</text>
     </view>
 </view>
