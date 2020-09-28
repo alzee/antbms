@@ -88,7 +88,10 @@ Page({
         const eventChannel = this.getOpenerEventChannel();
         var that = this;
         eventChannel.on('acceptDataFromOpenerPage', function(data) {
-            console.log(data);
+            //console.log(data);
+            wx.setNavigationBarTitle({
+                title: data.title
+            });
             that.setData({
                 list: pages[data.page],
             });

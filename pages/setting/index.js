@@ -18,6 +18,7 @@ Page({
 
     gotoPage: function(e) {
         var page = e.currentTarget.dataset.page;
+        var title = e.currentTarget.dataset.title;
         if (page == '9') {
             wx.navigateTo({
                 url: 'sys',
@@ -26,7 +27,7 @@ Page({
             wx.navigateTo({
                 url: 'setup',
                 success: function(res) {
-                    res.eventChannel.emit('acceptDataFromOpenerPage', { page: page })
+                    res.eventChannel.emit('acceptDataFromOpenerPage', { title: title, page: page })
                 }
             });
         }
