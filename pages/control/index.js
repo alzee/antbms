@@ -80,7 +80,7 @@ Page({
                     icon: 'loading',
                 });
                 wx.request({
-                    url: 'https://api.itove.com/antbms/UserLogin',
+                    url: getApp().globalData.url + '/UserLogin',
                     data: {},
                     method: 'POST',
                     success: function(){

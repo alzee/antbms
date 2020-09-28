@@ -5,60 +5,14 @@
         <text>机器参数</text>
         <text>设定参数</text>
     </view>
+<block wx:for="{{list}}">
     <view class="list-item">
-      <text>铁锂参数</text>
-      <text>55℃</text>
+      <text>{{item.title}}</text>
+      <text>{{item.value}} {{item.unit}}</text>
       <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
+          <input placeholder="{{item.value}}" />
+          <button bindtap="setup" class="bg-primary">设置</button>
       </view>
     </view>
-    <view class="list-item">
-      <text>三元参数</text>
-      <text>55℃</text>
-      <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
-      </view>
-    </view>
-    <view class="list-item">
-      <text>钛酸锂参数</text>
-      <text>55℃</text>
-      <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
-      </view>
-    </view>
-    <view class="list-item">
-      <text>电池物理容量</text>
-      <text>55℃</text>
-      <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
-      </view>
-    </view>
-    <view class="list-item">
-      <text>初始SOC</text>
-      <text>55℃</text>
-      <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
-      </view>
-    </view>
-    <view class="list-item">
-      <text>连接串数</text>
-      <text>55℃</text>
-      <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
-      </view>
-    </view>
-    <view class="list-item">
-      <text>总循环容量</text>
-      <text>55℃</text>
-      <view>
-          <input placeholder="55" />
-          <button class="bg-primary">设置</button>
-      </view>
-    </view>
+</block>
 </view>

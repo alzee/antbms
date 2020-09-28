@@ -1,65 +1,50 @@
-// pages/setting/index.js
+import { setup } from '../../utils/setup';
+
 Page({
 
-    /**
-     * 页面的初始数据
-     */
     data: {
+        list: [
+            {title: '铁锂参数', value: '55', unit: '℃'},
+            {title: '三元参数', value: '55', unit: '℃'},
+            {title: '钛酸锂参数', value: '55', unit: '℃'},
+            {title: '电池物理容量', value: '55', unit: '℃'},
+            {title: '初始SOC', value: '55', unit: '℃'},
+            {title: '连接串数', value: '55', unit: '℃'},
+            {title: '总循环容量', value: '55', unit: '℃'},
+        ]
 
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
+    setup: setup,
+
     onLoad: function (options) {
 
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
     onReady: function () {
 
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
     onShow: function () {
 
     },
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
     onHide: function () {
 
     },
 
-    /**
-     * 生命周期函数--监听页面卸载
-     */
     onUnload: function () {
 
     },
 
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
     onPullDownRefresh: function () {
 
     },
 
-    /**
-     * 页面上拉触底事件的处理函数
-     */
     onReachBottom: function () {
 
     },
 
-    /**
-     * 用户点击右上角分享
-     */
     onShareAppMessage: function () {
 
     }
