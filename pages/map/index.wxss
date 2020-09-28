@@ -1,8 +1,37 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.search {
+    text-align: center;
+    padding: 20rpx 20rpx;
 }
-.log-item {
-  margin: 10rpx;
+.search-input, .search-btn {
+    display: inline-block;
+    /*
+    height: 80rpx;
+    */
+}
+.search-btn {
+}
+.search-input {
+    height: 64rpx;
+    padding: 0 20rpx;
+    background-color: #f2f2f2;
+    border-radius: .25rem;
+    margin-right: 20rpx;
+}
+.border-bottom {
+    border-bottom: #cbcbcb 1px solid;
+}
+.list-item {
+    margin: 20rpx 20rpx;
+    padding: 20rpx 20rpx;
+    background-color: #f2f2f2;
+    border-radius: .25rem;
+    display: flex;
+    justify-content: space-between;
+}
+.list-item>button{
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+.dev-name {
 }
