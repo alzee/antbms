@@ -195,12 +195,15 @@ Page({
             },
             success(res){
                 var d = res.data.match(/{(.*)}/g)[0];   // Extact json from xml
-                // Remove quotes in Data: "{..}"
+                // Remove quotes in Data: "{..}" and Data: "[...]"
                 d = d.replace('"{', '{'); 
                 d = d.replace('}"', '}'); 
+                d = d.replace('"[', '['); 
+                d = d.replace(']"', ']'); 
                 d = d.replace(/\\/g, '');   // Remove \
                 d = JSON.parse(d);
                 console.log(d);
+                console.log(res);
             }
         });
     }
