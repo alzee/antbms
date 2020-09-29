@@ -85,18 +85,24 @@ Page({
     setup: setup,
 
     onLoad: function (options) {
-        const eventChannel = this.getOpenerEventChannel();
-        var that = this;
-        eventChannel.on('acceptDataFromOpenerPage', function(data) {
-            //console.log(data);
-            wx.setNavigationBarTitle({
-                title: data.title
-            });
-            that.setData({
-                list: pages[data.page],
-            });
-
-    })
+        console.log(options);
+        wx.setNavigationBarTitle({
+            title: options.title
+        });
+        this.setData({
+            list: pages[options.page],
+        });
+        //const eventChannel = this.getOpenerEventChannel();
+        //var that = this;
+        //eventChannel.on('acceptDataFromOpenerPage', function(data) {
+        //    //console.log(data);
+        //    wx.setNavigationBarTitle({
+        //        title: data.title
+        //    });
+        //    that.setData({
+        //        list: pages[data.page],
+        //    });
+        //})
 
     },
 

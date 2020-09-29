@@ -25,10 +25,10 @@ Page({
             });
         } else {
             wx.navigateTo({
-                url: 'setup',
-                success: function(res) {
-                    res.eventChannel.emit('acceptDataFromOpenerPage', { title: title, page: page })
-                }
+                url: 'setup?title=' + title + '&page=' + page,
+                //success: function(res) {
+                //    res.eventChannel.emit('acceptDataFromOpenerPage', { title: title, page: page })
+                //}
             });
         }
     },
