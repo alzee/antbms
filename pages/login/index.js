@@ -63,7 +63,7 @@ Page({
         //wx.setStorageSync("sessionid", "sometoken");
         //console.log(wx.getStorageSync("sessionid"));
         //wx.clearStorage();
-        if (!wx.getStorageSync("UserId")) {
+        if (wx.getStorageSync("UserId")) {
             wx.switchTab({
                 url: "../status/index"
             });
