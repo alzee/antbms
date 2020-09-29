@@ -63,7 +63,7 @@ Page({
         //wx.setStorageSync("sessionid", "sometoken");
         //console.log(wx.getStorageSync("sessionid"));
         //wx.clearStorage();
-        if (wx.getStorageSync("sessionid")) {
+        if (wx.getStorageSync("UserId")) {
             wx.switchTab({
                 url: "../status/index"
             });
@@ -83,7 +83,6 @@ Page({
         });
     },
     formSubmit: function(e) {
-        console.log(e.detail.value);
         var date = new Date();
         var y = date.getFullYear();
         var m = date.getMonth()+1;
@@ -97,19 +96,35 @@ Page({
         min = min < 10 ? '0' + min : min;
         s = s < 10 ? '0' + s : s;
         var time = y + '' + m + '' + d + '' + h + '' + min + '' + s;
+        var username = e.detail.value.Username;
+        var pass = e.detail.value.Pwd;
+        var username = sha1_to_base64(encryptByDES(username, key, iv));
+        var pass = sha1_to_base64(encryptByDES(pass, key, iv));
+        var time = sha1_to_base64(encryptByDES(time, key, iv));
+        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <UserLogin xmlns="http://tempuri.org/"> <username>' + username + '</username> <password>' + pass + '</password> <time>' + time + '</time> </UserLogin> </soap12:Body> </soap12:Envelope>';
         wx.request({
-            url: appData.url + '/UserLogin',
-            data: {
-                Username: e.detail.value.Username,
-                Pwd: e.detail.value.Pwd,
-                Time: time,
-            },
-            header: { 'Content-Type': 'application/x-www-form-urlencoded'},
+            url: appData.url,
+            data: data,
+            header: {
+                'Content-Type': 'application/soap+xml; charset=utf-8',
+                },
             method: "POST",
             success: (res) => {
-                if (res && res.header && res.header['Set-Cookie']) {
+                var d = res.data.match(/{(.*)}/g)[0];   // Extact json from xml
+                // Remove quotes in Data: "{..}" and Data: "[...]"
+                d = d.replace('"{', '{'); 
+                d = d.replace('}"', '}'); 
+                d = d.replace('"[', '['); 
+                d = d.replace(']"', ']'); 
+                d = d.replace(/\\/g, '');   // Remove \
+                d = JSON.parse(d);
+                console.log(d);
+                //console.log(res);
+                if (d.Code === '0') {
                 //if (1) {
-                    wx.setStorageSync('sessionid', res.header['Set-Cookie']);
+                    wx.setStorageSync('Token', d.Token);
+                    wx.setStorageSync('UserId', d.Data.UserId);
+                    wx.setStorageSync('RoleId', d.Data.RoleId);
                     wx.showToast({
                         title: '成功',
                         icon: 'success',
@@ -128,7 +143,6 @@ Page({
                         duration: 2000
                     });
                 }
-                console.log(res);
             },
         });
     },
@@ -198,8 +212,6 @@ Page({
                 d = d.replace(']"', ']'); 
                 d = d.replace(/\\/g, '');   // Remove \
                 d = JSON.parse(d);
-                console.log(d);
-                console.log(res);
             }
         });
     }

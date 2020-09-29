@@ -4,7 +4,7 @@ export function setup(){
         icon: 'loading',
     });
     wx.request({
-        url: getApp().globalData.url + '/UserLogin',
+        url: getApp().globalData._url + '/UserLogin',
         data: {},
         method: 'POST',
         success: function(){

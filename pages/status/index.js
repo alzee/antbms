@@ -15,7 +15,7 @@ Page({
         var that = this;
         var Soc;
         wx.request({
-            url: getApp().globalData.url + '/GetSingleEquipment',
+            url: getApp().globalData._url + '/GetSingleEquipment',
             success(res){
                 Soc = res.data.Data.Soc;
                 that.animate('.circle-bar', [
