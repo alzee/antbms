@@ -1,4 +1,4 @@
-import { setup } from '../../utils/setup';
+//import { setup } from '../../utils/setup';
 var pages =  [
     [
         {title: '铁锂参数', value: '55', unit: '℃'},
@@ -82,10 +82,24 @@ Page({
     data: {
     },
 
-    setup: setup,
+    setup: function () {
+        wx.showToast({
+            icon: 'loading',
+        });
+        wx.request({
+            url: getApp().globalData._url + '/UserLogin',
+            data: {},
+            method: 'POST',
+            success: function(){
+                wx.showToast({
+                    title: '设置完成',
+                    icon: 'none',
+                });
+            }
+        });
+    },
 
     onLoad: function (options) {
-        console.log(options);
         wx.setNavigationBarTitle({
             title: options.title
         });
