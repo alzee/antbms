@@ -176,7 +176,6 @@ Page({
         var UserId = '06106F7C-EF52-4F7C-9A4E-B44FBBE52A81';
         var RoleId = '496C9E5C-41E1-4133-833D-90C1D4BCD01E';
         var Token = '8WE0fbOU8AH4+oTaupwl9t8r0wK55uucztf8Jm6wbCp180GTqXnb5bOGsoUbjsMzZveaTm2DrV3n9qv5snD4TeLuGuE5gHd5ue0l0MplylY=';
-        console.log(username);
 
         var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetUserInfo_ xmlns="http://tempuri.org/"> <uid>string</uid> <pwd>string</pwd> </GetUserInfo_> </soap12:Body> </soap12:Envelope>';
         var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <getWeatherbyCityName xmlns="http://WebXml.com.cn/"> <theCityName>上海</theCityName> </getWeatherbyCityName> </soap12:Body> </soap12:Envelope>';
@@ -195,7 +194,13 @@ Page({
                 'Content-Type': 'application/soap+xml; charset=utf-8',
             },
             success(res){
-                console.log(res.data);
+                var d = res.data.match(/{(.*)}/g)[0];   // Extact json from xml
+                // Remove quotes in Data: "{..}"
+                d = d.replace('"{', '{'); 
+                d = d.replace('}"', '}'); 
+                d = d.replace(/\\/g, '');   // Remove \
+                d = JSON.parse(d);
+                console.log(d);
             }
         });
     }
