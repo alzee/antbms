@@ -63,7 +63,7 @@ Page({
         //wx.setStorageSync("sessionid", "sometoken");
         //console.log(wx.getStorageSync("sessionid"));
         //wx.clearStorage();
-        if (wx.getStorageSync("UserId")) {
+        if (!wx.getStorageSync("UserId")) {
             wx.switchTab({
                 url: "../status/index"
             });
@@ -168,8 +168,6 @@ Page({
     },
 
     onReady: function() {
-        var username = 'admin';
-        var pass = '123456';
         var date = new Date();
         var y = date.getFullYear();
         var m = date.getMonth()+1;
@@ -183,18 +181,29 @@ Page({
         min = min < 10 ? '0' + min : min;
         s = s < 10 ? '0' + s : s;
         var time = y + '' + m + '' + d + '' + h + '' + min + '' + s;
+        var Searchtime = '';
+        var username = 'admin';
+        var pass = '123456';
+        var UserId = wx.getStorageSync('UserId');
+        var Token = wx.getStorageSync('Token');
+        var Equcode = '6AD16DF2-8F41-4EC8-8B1E-F746A00DA39C';
+        var Equid = Equcode;
+
         var username = sha1_to_base64(encryptByDES(username, key, iv));
         var pass = sha1_to_base64(encryptByDES(pass, key, iv));
         var time = sha1_to_base64(encryptByDES(time, key, iv));
-        
-        var UserId = '06106F7C-EF52-4F7C-9A4E-B44FBBE52A81';
-        var RoleId = '496C9E5C-41E1-4133-833D-90C1D4BCD01E';
-        var Token = '8WE0fbOU8AH4+oTaupwl9t8r0wK55uucztf8Jm6wbCp180GTqXnb5bOGsoUbjsMzZveaTm2DrV3n9qv5snD4TeLuGuE5gHd5ue0l0MplylY=';
+        var UserId = sha1_to_base64(encryptByDES(UserId, key, iv));
+        var Equid = sha1_to_base64(encryptByDES(Equid, key, iv));
+        console.log(UserId, Token, Equcode, Equid);
 
-        // GetUserEuipment
-        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetUserEuipment xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equcode></equcode> <pageindex>1</pageindex> <pagesize>5</pagesize> <time>'+ time +'</time> <token>'+ Token+'</token> </GetUserEuipment> </soap12:Body> </soap12:Envelope>';
         // UserLogin
         var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <UserLogin xmlns="http://tempuri.org/"> <username>' + username + '</username> <password>' + pass + '</password> <time>' + time + '</time> </UserLogin> </soap12:Body> </soap12:Envelope>';
+        // GetUserEuipment
+        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetUserEuipment xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equcode></equcode> <pageindex>1</pageindex> <pagesize>5</pagesize> <time>'+ time +'</time> <token>'+ Token+'</token> </GetUserEuipment> </soap12:Body> </soap12:Envelope>';
+        // GetEquipmentDetils
+        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetEquipmentDetils xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equid>'+ Equid +'</equid> <searchtime>'+ Searchtime +'</searchtime> <time>'+ time +'</time> <token>'+ Token +'</token> </GetEquipmentDetils> </soap12:Body> </soap12:Envelope>';
+        // GetSingleEquipment
+        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetSingleEquipment xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equid>'+ Equid +'</equid> <time>' + time + '</time> <token>' + Token + '</token> </GetSingleEquipment> </soap12:Body> </soap12:Envelope>';
         wx.request({
             url: 'http://192.168.31.198:8081/AntService.asmx',
             url: 'http://www.mayibms.com:8081/AntService.asmx',
@@ -212,6 +221,8 @@ Page({
                 d = d.replace(']"', ']'); 
                 d = d.replace(/\\/g, '');   // Remove \
                 d = JSON.parse(d);
+                console.log(d);
+                console.log(res.data);
             }
         });
     }
