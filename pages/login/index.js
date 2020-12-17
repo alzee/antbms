@@ -60,10 +60,74 @@ Page({
         currentTab: 0,
     },
     onLoad: function() {
+        console.log(getApp().req());
+    },
+    onLoad0: function() {
+        var date = new Date();
+        var y = date.getFullYear();
+        var m = date.getMonth()+1;
+        var d = date.getDate();
+        var h = date.getHours();
+        var min = date.getMinutes();
+        var s = date.getSeconds();
+        m = m < 10 ? '0' + m : m;
+        d = d < 10 ? '0' + d : d;
+        h = h < 10 ? '0' + h : h;
+        min = min < 10 ? '0' + min : min;
+        s = s < 10 ? '0' + s : s;
+        var time = y + '' + m + '' + d + '' + h + '' + min + '' + s;
+        var Searchtime = '';
+        //var username = 'admin';
+        //var pass = '123456';
+        var UserId = wx.getStorageSync('UserId');
+        var Token = wx.getStorageSync('Token');
+        var Equcode = '1212123456342478';
+        var Equcode = '1581551721300008';
+        var Equid = Equcode;
+
+        var username = sha1_to_base64(encryptByDES(username, key, iv));
+        var pass = sha1_to_base64(encryptByDES(pass, key, iv));
+        var time = sha1_to_base64(encryptByDES(time, key, iv));
+        var UserId = sha1_to_base64(encryptByDES(UserId, key, iv));
+        var Equid = sha1_to_base64(encryptByDES(Equid, key, iv));
+
+        // UserLogin
+        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <UserLogin xmlns="http://tempuri.org/"> <username>' + username + '</username> <password>' + pass + '</password> <time>' + time + '</time> </UserLogin> </soap12:Body> </soap12:Envelope>';
+        // GetEquipmentDetils
+        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetEquipmentDetils xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equid>'+ Equid +'</equid> <searchtime>'+ Searchtime +'</searchtime> <time>'+ time +'</time> <token>'+ Token +'</token> </GetEquipmentDetils> </soap12:Body> </soap12:Envelope>';
+        // GetUserEuipment
+        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetUserEuipment xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equcode></equcode> <pageindex>1</pageindex> <pagesize>5</pagesize> <time>'+ time +'</time> <token>'+ Token+'</token> </GetUserEuipment> </soap12:Body> </soap12:Envelope>';
+        // GetSingleEquipment
+        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetSingleEquipment xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equid>'+ Equid +'</equid> <time>' + time + '</time> <token>' + Token + '</token> </GetSingleEquipment> </soap12:Body> </soap12:Envelope>';
+        wx.request({
+            url: appData.url,
+            data: data,
+            method: 'POST',
+            header: {
+                'Content-Type': 'application/soap+xml; charset=utf-8',
+            },
+            success(res){
+                var d = res.data.match(/{(.*)}/g)[0];   // Extact json from xml
+                // Remove quotes in Data: "{..}" and Data: "[...]"
+                d = d.replace('"{', '{'); 
+                d = d.replace('}"', '}'); 
+                d = d.replace('"[', '['); 
+                d = d.replace(']"', ']'); 
+                d = d.replace(/\\/g, '');   // Remove \
+                d = JSON.parse(d);
+                console.log(d.Data);
+                //console.log(res.data);
+                getApp().globalData.data = d.Data;
+                //wx.setStorageSync('Token', d.Token);
+                //wx.setStorageSync('UserId', d.Data.UserId);
+                //wx.setStorageSync('RoleId', d.Data.RoleId);
+            }
+        });
+
         //wx.setStorageSync("sessionid", "sometoken");
         //console.log(wx.getStorageSync("sessionid"));
         //wx.clearStorage();
-        if (wx.getStorageSync("UserId")) {
+        if (Token !== '') {
             wx.switchTab({
                 url: "../status/index"
             });
@@ -105,10 +169,10 @@ Page({
         wx.request({
             url: appData.url,
             data: data,
+            method: "POST",
             header: {
                 'Content-Type': 'application/soap+xml; charset=utf-8',
                 },
-            method: "POST",
             success: (res) => {
                 var d = res.data.match(/{(.*)}/g)[0];   // Extact json from xml
                 // Remove quotes in Data: "{..}" and Data: "[...]"
@@ -168,62 +232,5 @@ Page({
     },
 
     onReady: function() {
-        var date = new Date();
-        var y = date.getFullYear();
-        var m = date.getMonth()+1;
-        var d = date.getDate();
-        var h = date.getHours();
-        var min = date.getMinutes();
-        var s = date.getSeconds();
-        m = m < 10 ? '0' + m : m;
-        d = d < 10 ? '0' + d : d;
-        h = h < 10 ? '0' + h : h;
-        min = min < 10 ? '0' + min : min;
-        s = s < 10 ? '0' + s : s;
-        var time = y + '' + m + '' + d + '' + h + '' + min + '' + s;
-        var Searchtime = '';
-        var username = 'admin';
-        var pass = '123456';
-        var UserId = wx.getStorageSync('UserId');
-        var Token = wx.getStorageSync('Token');
-        var Equcode = '6AD16DF2-8F41-4EC8-8B1E-F746A00DA39C';
-        var Equid = Equcode;
-
-        var username = sha1_to_base64(encryptByDES(username, key, iv));
-        var pass = sha1_to_base64(encryptByDES(pass, key, iv));
-        var time = sha1_to_base64(encryptByDES(time, key, iv));
-        var UserId = sha1_to_base64(encryptByDES(UserId, key, iv));
-        var Equid = sha1_to_base64(encryptByDES(Equid, key, iv));
-        console.log(UserId, Token, Equcode, Equid);
-
-        // UserLogin
-        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <UserLogin xmlns="http://tempuri.org/"> <username>' + username + '</username> <password>' + pass + '</password> <time>' + time + '</time> </UserLogin> </soap12:Body> </soap12:Envelope>';
-        // GetUserEuipment
-        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetUserEuipment xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equcode></equcode> <pageindex>1</pageindex> <pagesize>5</pagesize> <time>'+ time +'</time> <token>'+ Token+'</token> </GetUserEuipment> </soap12:Body> </soap12:Envelope>';
-        // GetEquipmentDetils
-        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetEquipmentDetils xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equid>'+ Equid +'</equid> <searchtime>'+ Searchtime +'</searchtime> <time>'+ time +'</time> <token>'+ Token +'</token> </GetEquipmentDetils> </soap12:Body> </soap12:Envelope>';
-        // GetSingleEquipment
-        var data = '<?xml version="1.0" encoding="utf-8"?> <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"> <soap12:Body> <GetSingleEquipment xmlns="http://tempuri.org/"> <userid>'+ UserId +'</userid> <equid>'+ Equid +'</equid> <time>' + time + '</time> <token>' + Token + '</token> </GetSingleEquipment> </soap12:Body> </soap12:Envelope>';
-        wx.request({
-            url: 'http://192.168.31.198:8081/AntService.asmx',
-            url: 'http://www.mayibms.com:8081/AntService.asmx',
-            data: data,
-            method: 'POST',
-            header: {
-                'Content-Type': 'application/soap+xml; charset=utf-8',
-            },
-            success(res){
-                var d = res.data.match(/{(.*)}/g)[0];   // Extact json from xml
-                // Remove quotes in Data: "{..}" and Data: "[...]"
-                d = d.replace('"{', '{'); 
-                d = d.replace('}"', '}'); 
-                d = d.replace('"[', '['); 
-                d = d.replace(']"', ']'); 
-                d = d.replace(/\\/g, '');   // Remove \
-                d = JSON.parse(d);
-                console.log(d);
-                console.log(res.data);
-            }
-        });
     }
 })

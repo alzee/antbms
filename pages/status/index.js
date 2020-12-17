@@ -71,7 +71,6 @@ Page({
         d.wd = d.WdList[0];
         d.AllTimerMs = d.AllTimerMs.toDDHHMMSS();
 
-        d.PackSoc = 57; 
         this.animate('.circle-bar', [
             {rotate: -225},
             {rotate: -225 + (180 * d.PackSoc / 100)},
