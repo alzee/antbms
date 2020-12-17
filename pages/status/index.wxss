@@ -41,6 +41,7 @@
 .vol-num, .vol-value {
   padding: .2em .6em;
   height: 64rpx;
+  width: 102rpx;
 }
 .vol-num {
   border-top-left-radius: .25rem;
