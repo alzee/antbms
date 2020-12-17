@@ -12,10 +12,23 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        var d = getApp().globalData.data;
+
+        var dy = [];
+        for(var i in d.DyList[0]) {
+            dy.push(d.DyList[0][i]);
+        }
+        d.dy = dy;
+        d.wd = d.WdList[0];
+        
+        this.setData(d);
+        console.log(this.data);
+        return;
+
         var that = this;
         var Soc;
         wx.request({
-            url: getApp().globalData._url + '/GetSingleEquipment',
+            url: getApp().globalData.url + '/GetSingleEquipment',
             success(res){
                 Soc = res.data.Data.Soc;
                 that.animate('.circle-bar', [
@@ -37,9 +50,8 @@ Page({
                     if (i.indexOf('Wd') == 0 && i != 'WdZb') wd[i] = res.data.Data[i];
                 };
                 res.data.Data.wd = wd;
-                getApp().globalData.data = res.data.Data;
+                //getApp().globalData.data = res.data.Data;
                 that.setData(res.data.Data);
-                //console.log(res.data.Data);
             }
         });
         
