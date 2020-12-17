@@ -3,11 +3,11 @@
     <view id="summary">
         <view>
             <text>当前连接状态：</text>
-            <text class="text-primary">ANT-RV-123-456</text>
+            <text class="text-primary"></text>
         </view>
         <view>
             <text>运行时间：</text>
-            <text class="text-primary">120天32小时48分32秒</text>
+            <text class="text-primary">{{ AllTimerMs }}</text>
         </view>
     </view>
     <view id="dash">
@@ -30,7 +30,7 @@
               总容量
             </text>
             <text class="text-primary">
-              {{ PackAllAh }}AH
+              {{ PackPhysicsAh }}AH
             </text>
           </view>
         </view>
@@ -74,56 +74,56 @@
         <view>
           <image src="/img/icon_totalvoltage.png"></image>
           <view>
-            <text>{{ Zdy }} V</text>
+            <text>{{ VoltagePack }} V</text>
             <text>总电压</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_electriccurrent.png"></image>
           <view>
-            <text>{{  }} V</text>
+            <text>{{ CurrentValue }} V</text>
             <text>电流</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_power.png"></image>
           <view>
-            <text>{{ Gl }} V</text>
+            <text>{{ PackPower }} V</text>
             <text>功率</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_maximumvoltage.png"></image>
           <view>
-            <text>{{ ZgDtDy }} V</text>
+            <text>{{ VoltageCellMaxValue }} V</text>
             <text>最高电压</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_minimumvoltage.png"></image>
           <view>
-            <text>{{ ZdDtDy }} V</text>
+            <text>{{ VoltageCellMinValue }} V</text>
             <text>最低电压</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_differentialpressure.png"></image>
           <view>
-            <text>{{ PjDtDy }} V</text>
+            <text>{{ VoltageCellAverageValue }} V</text>
             <text>平均电压</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_differentialpressure.png"></image>
           <view>
-            <text>56.7 V</text>
+            <text>{{ VoltageCellDifference }} V</text>
             <text>压差</text>
           </view>
         </view>
         <view>
           <image src="/img/icon_totalcirculation.png"></image>
           <view>
-            <text>56.7 V</text>
+            <text>{{ PackAllAh }} V</text>
             <text>总循环</text>
           </view>
         </view>
@@ -143,19 +143,19 @@
           </view>
           <view>
             <text>T1</text>
-            <text class="text-primary">16℃</text>
+            <text class="text-primary">{{ wd.Wd1 }}℃</text>
           </view>
           <view>
             <text>T2</text>
-            <text class="text-primary">16℃</text>
+            <text class="text-primary">{{ wd.Wd2 }}℃</text>
           </view>
           <view>
             <text>T3</text>
-            <text class="text-primary">16℃</text>
+            <text class="text-primary">{{ wd.Wd3 }}℃</text>
           </view>
           <view>
             <text>T4</text>
-            <text class="text-primary">16℃</text>
+            <text class="text-primary">{{ wd.Wd4 }}℃</text>
           </view>
         </view>
     </view>
