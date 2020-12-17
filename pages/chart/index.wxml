@@ -20,7 +20,7 @@
             <text>SOC</text>
           </view>
           <view>
-            <text class="text-primary">{{Soc}}%</text>
+            <text class="text-primary">{{PackSoc}}%</text>
           </view>
         </view>
     </view>
@@ -28,8 +28,8 @@
       <view>
         <image class="left" src="/img/pic_left.png"></image>
         <image class="dash-pic" src="/img/pic_v.png"></image>
-        <text class="text-primary text-sup text-left">{{Zdy}}</text>
-        <text class="text-primary text-sub text-left">{{ZgDtDy}}</text>
+        <text class="text-primary text-sup text-left">{{ VoltagePack }}</text>
+        <text class="text-primary text-sub text-left">{{ VoltageCellMaxValue }}</text>
         <view class="pointer">
             <image src="/img/v_pointer.png"></image>
         </view>
@@ -37,7 +37,7 @@
       <view>
         <image class="right" src="/img/pic_right.png"></image>
         <image class="dash-pic" src="/img/pic_a.png"></image>
-        <text class="text-primary text-sup text-right">{{Dl}}</text>
+        <text class="text-primary text-sup text-right">{{ CurrentValue }}</text>
         <view class="pointer">
             <image src="/img/a_pointer.png"></image>
         </view>

@@ -104,11 +104,13 @@
 }
 .text-sub, .text-sup {
     position: absolute;
-    left: 40%;
-    border: grey 1px solid;
+    left: 38%;
+    width: 58rpx;
+    border: grey 1px solid !important;
     border-radius: .25rem;
     padding: 0 10rpx;
     font-size: 24rpx;
+    text-align: center;
 }
 .text-sup {
     top: 26%;
@@ -124,5 +126,7 @@
 }
 .pointer {
     position: absolute;
-    display: none;
+    top: -50px;
+    left: 22px;
+    z-index: 999;
 }

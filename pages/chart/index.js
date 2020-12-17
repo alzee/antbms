@@ -88,12 +88,19 @@ Page({
             }
         });
 
-        this.setData(app.globalData.data);
-        var Soc = this.data.Soc;
+        var d = getApp().globalData.data;
+
         this.animate('.circle-bar', [
             {rotate: -225},
-            {rotate: -225 + (180 * Soc / 100)},
+            {rotate: -225 + (180 * d.PackSoc / 100)},
         ],800);
-        console.log(app.globalData.data);
+
+        this.animate('.pointer', [
+            {transformOrigin: '63% 49%', rotate: -90},
+            {transformOrigin: '63% 49%', rotate: -90 + (d.CurrentValue * 90 / 228)},
+        ],800);
+
+        this.setData(d);
+        console.log(this.data);
     }
 });
