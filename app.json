@@ -50,7 +50,7 @@
       },
       {
         "pagePath": "pages/map/index",
-        "text": "地图监控",
+        "text": "轨迹回放",
         "iconPath": "img/icon_tab4.png",
         "selectedIconPath": "img/icon_tab4_select.png"
       }
