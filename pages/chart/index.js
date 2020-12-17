@@ -88,7 +88,7 @@ Page({
             }
         });
 
-        var d = getApp().globalData.data;
+        var d = getApp().globalData.params;
 
         this.animate('.circle-bar', [
             {rotate: -225},

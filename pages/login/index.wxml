@@ -13,7 +13,7 @@
             <input class="weui-input" password name="Pwd" placeholder="密码" />
         </view>
         <view>
-            <button class="login-submit" formType="submit">登录</button>
+            <button class="login-submit" form-type="submit">登录</button>
         </view>
     </form>
 </view>
