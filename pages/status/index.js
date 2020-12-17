@@ -12,6 +12,42 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        //var that = this;
+        //var Soc;
+        //wx.request({
+        //    url: getApp().globalData.url + '/GetSingleEquipment',
+        //    success(res){
+        //        Soc = res.data.Data.Soc;
+        //        that.animate('.circle-bar', [
+        //            {rotate: -225},
+        //            {rotate: -225 + (180 * Soc / 100)},
+        //        ],800);
+
+        //        var dy = {};
+        //        for (var i in res.data.Data) {
+        //            if (i.indexOf('DY') == 0) {
+        //                var j = i.replace('DY', '');
+        //                dy[j] = res.data.Data[i];
+        //            }
+        //        };
+        //        res.data.Data.dy = dy;
+
+        //        var wd = {};
+        //        for (var i in res.data.Data) {
+        //            if (i.indexOf('Wd') == 0 && i != 'WdZb') wd[i] = res.data.Data[i];
+        //        };
+        //        res.data.Data.wd = wd;
+        //        //getApp().globalData.data = res.data.Data;
+        //        that.setData(res.data.Data);
+        //    }
+        //});
+        
+    },
+
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady: function () {
         var d = getApp().globalData.data;
 
         var dy = [];
@@ -23,44 +59,6 @@ Page({
         
         this.setData(d);
         console.log(this.data);
-        return;
-
-        var that = this;
-        var Soc;
-        wx.request({
-            url: getApp().globalData.url + '/GetSingleEquipment',
-            success(res){
-                Soc = res.data.Data.Soc;
-                that.animate('.circle-bar', [
-                    {rotate: -225},
-                    {rotate: -225 + (180 * Soc / 100)},
-                ],800);
-
-                var dy = {};
-                for (var i in res.data.Data) {
-                    if (i.indexOf('DY') == 0) {
-                        var j = i.replace('DY', '');
-                        dy[j] = res.data.Data[i];
-                    }
-                };
-                res.data.Data.dy = dy;
-
-                var wd = {};
-                for (var i in res.data.Data) {
-                    if (i.indexOf('Wd') == 0 && i != 'WdZb') wd[i] = res.data.Data[i];
-                };
-                res.data.Data.wd = wd;
-                //getApp().globalData.data = res.data.Data;
-                that.setData(res.data.Data);
-            }
-        });
-        
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
 
     },
 

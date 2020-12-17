@@ -20,7 +20,7 @@
                 <text>SOC</text>
               </view>
               <view>
-                <text class="text-primary">{{ Soc }}%</text>
+                <text class="text-primary">{{ PackSoc }}%</text>
               </view>
             </view>
           </view>
@@ -30,14 +30,14 @@
               总容量
             </text>
             <text class="text-primary">
-              35.886AH
+              {{ PackAllAh }}AH
             </text>
           </view>
         </view>
         <view id="mos">
             <view>
                 <text class="label">充电MOS：</text>
-                <block wx:if="{{CdMosZt == 1}}">
+                <block wx:if="{{ChMosState == 1}}">
                     <text class="circle-fill-green"></text>
                     <text class="text-green">开启</text>
                 </block>
@@ -48,7 +48,7 @@
             </view>
             <view>
                 <text class="label">放电MOS：</text>
-                <block wx:if="{{FdMosZt == 1}}">
+                <block wx:if="{{DisMosState == 1}}">
                     <text class="circle-fill-green"></text>
                     <text class="text-green">开启</text>
                 </block>
@@ -59,7 +59,7 @@
             </view>
             <view>
                 <text class="label">均衡：</text>
-                <block wx:if="{{JhZt == 1}}">
+                <block wx:if="{{BalanceState == 1}}">
                     <text class="circle-fill-green"></text>
                     <text class="text-green">开启</text>
                 </block>
@@ -81,7 +81,7 @@
         <view>
           <image src="/img/icon_electriccurrent.png"></image>
           <view>
-            <text>{{ Dl }} V</text>
+            <text>{{  }} V</text>
             <text>电流</text>
           </view>
         </view>
@@ -135,11 +135,11 @@
         <view id="temp-text">
           <view class="first-line">
             <text>MOS</text>
-            <text class="text-primary">16℃</text>
+            <text class="text-primary">{{TemperatureMos}}℃</text>
           </view>
           <view class="first-line">
             <text>均衡</text>
-            <text class="text-primary">16℃</text>
+            <text class="text-primary">{{TemperatureBalance}}℃</text>
           </view>
           <view>
             <text>T1</text>
